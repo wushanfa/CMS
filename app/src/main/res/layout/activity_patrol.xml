@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/org_blue_background">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_btn_back"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_pat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="龚建三 85岁 10床"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 时间 & 历史-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:id="@+id/tv_patient_id"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="巡视时间:"
+                android:textColor="@color/my_textcolor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_time_patrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_patient_id"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="2016-11-03 09:50"
+                android:textColor="@color/my_textcolor"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_time_patrol"
+                android:background="@color/blue_700"
+                android:text="历史"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_zhuyuanhao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/black_text_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="巡视内容"
+            android:textColor="@color/my_textcolor"
+            android:textSize="16sp" />
+
+        <GridView
+            android:id="@+id/gv_patrol_text"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="20dp"
+            android:numColumns="2"
+            android:columnWidth="110dp"
+            android:stretchMode="columnWidth"
+            android:listSelector="@android:color/transparent"
+            android:verticalSpacing="20dp"
+            android:horizontalSpacing="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center">
+        </GridView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_list_driver_white" />
+        <ListView
+            android:id="@+id/lv_order_list"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

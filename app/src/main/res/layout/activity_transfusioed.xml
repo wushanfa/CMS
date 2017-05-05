@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_transfusioned"
+    android:background="@color/grey_background">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
+    </FrameLayout>
+
+    <include
+        android:id="@+id/inc_command_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true"
+        layout="@layout/activity_command_abtoolbar" />
+
+</RelativeLayout>

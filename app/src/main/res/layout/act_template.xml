@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_template"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background" >
+
+    <ScrollView
+        android:id="@+id/sc_current"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <!-- 时间 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/performing_template"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/sp_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/org_blue_background"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 体温 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="体温:" />
+
+                <EditText
+                    android:id="@+id/et_temperature"
+                    style="@style/text_style_context"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center"
+                    android:numeric="decimal" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="℃" />
+
+                <Spinner
+                    android:id="@+id/sp_temperature_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/org_blue_background"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 脉搏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="脉搏:" />
+
+                <EditText
+                    android:id="@+id/et_pulse"
+                    style="@style/text_style_context"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="次/分" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_pulse"
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="脉搏短绌" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 心率 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="心率:" />
+
+                <EditText
+                    android:id="@+id/et_heartrate"
+                    style="@style/text_style_context"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="次/分" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_pacemaker"
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="起搏器" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 呼吸 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="呼吸:" />
+
+                <EditText
+                    android:id="@+id/et_breathing"
+                    style="@style/text_style_context"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center"
+                    android:numeric="decimal" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="次/分"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_ventilator"
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="呼吸机" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 血压 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="血压:" />
+
+                <EditText
+                    android:id="@+id/et_systolicpressure"
+                    style="@style/text_style_context"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center"
+                    android:numeric="decimal" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="/" />
+
+                <EditText
+                    android:id="@+id/et_diastolicpressure"
+                    style="@style/text_style_context"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/icon_list_driver_white"
+                    android:gravity="center" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mmHg" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+
+            <!-- 血糖 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/text_style_context_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="血糖:" />
+
+                <EditText
+                    android:id="@+id/et_bloodsugar"
+                    style="@style/text_style_context"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="mmol/L" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" >
+                </View>
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="疼痛:"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_pain"
+                    style="@style/text_style_context"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/text_style_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="分"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/threetestline" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/table_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#c8cbcc"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <LinearLayout style="@style/layout_input_amount_style" >
+
+            <Button
+                android:id="@+id/btn_top_1"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn_top_2"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn_top_3"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btn_top_4"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btn_top_5"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btn_top_6"
+                style="@style/btn_input_amount_style"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/layout_input_amount_style" >
+
+                    <Button
+                        android:id="@+id/btn_1"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/btn_2"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="2" />
+
+                    <Button
+                        android:id="@+id/btn_3"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="3" />
+
+                    <Button
+                        android:id="@+id/btn_4"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="4" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/layout_input_amount_style" >
+
+                    <Button
+                        android:id="@+id/btn_5"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/btn_6"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="6" />
+
+                    <Button
+                        android:id="@+id/btn_7"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="7" />
+
+                    <Button
+                        android:id="@+id/btn_8"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="8" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/layout_input_amount_style" >
+
+                    <Button
+                        android:id="@+id/btn_poit"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="." />
+
+                    <Button
+                        android:id="@+id/btn_0"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/btn_9"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:text="9" />
+
+                    <ImageButton
+                        android:id="@+id/btn_delete"
+                        style="@style/btn_input_amount_style"
+                        android:layout_marginRight="1dp"
+                        android:src="@drawable/sym_keyboard_feedback_delete" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_finished"
+                style="@style/btn_input_amount_style"
+                android:layout_marginRight="1dp"
+                android:text="完成" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_back_msg_save" />
+
+</RelativeLayout>

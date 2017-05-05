@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/past"
+    android:layout_width="wrap_content"
+    android:layout_height="465dp"
+    android:paddingBottom="10dp"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <!-- 体重 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="体            重:"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_weight"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="kg"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 大便 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="大            便: "
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_dabian1"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="次 /"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_dabian2"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="g"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 小便 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="小            便: "
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_xiaobian1"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="次 /"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_xiaobian2"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="ml"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 出水量 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="出    水    量:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_chushuiliang"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="ml"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 入水量 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="入    水    量:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_rushuiliang"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="ml"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 药物过敏 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="药 物 过 敏 :"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/yaowuguomintishi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 增加项1 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/add1"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="4dp"
+                android:background="@null"
+                android:gravity="left"
+                android:text="增    加    项:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_xuantian"
+                android:layout_width="55dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        <!-- 增加项2 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/add2"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="4dp"
+                android:background="@null"
+                android:gravity="left"
+                android:text="增    加    项:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_xuantian2"
+                android:layout_width="55dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+
+
+        <!--
+        手术时间
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/add3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@null"
+                android:gravity="left"
+                android:text="手 术 时  间:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/et_xuantian3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="center"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline" />
+        -->
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="180dp"
+            android:background="@color/transparent"
+            />
+    </LinearLayout>
+
+</ScrollView>

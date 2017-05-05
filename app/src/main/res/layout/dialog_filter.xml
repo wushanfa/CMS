@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/top_right_bottom_left_padding">
+
+    <RadioGroup
+        android:id="@+id/rg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_time_all"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_today"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="今天"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_tomorry"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="明天"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_yestady"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="昨天"
+            android:textColor="@color/black_text_title"></RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_type_all"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:text="全部"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_long"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="长期"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_moment"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="临时"
+            android:textColor="@color/black_text_title"></RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_status_all"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:text="全部"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_execute"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="未执行"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_executed"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:text="已执行"
+            android:textColor="@color/black_text_title"></RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal">
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <RadioButton
+            android:id="@+id/rb_class_all"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_treatment"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_infusion"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_inject"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_class_two"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_class_one"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_class_two"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_class_three"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text_title"></RadioButton>
+    </RadioGroup>
+
+
+
+</LinearLayout>

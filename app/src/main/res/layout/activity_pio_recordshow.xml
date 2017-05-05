@@ -1,0 +1,117 @@
+<ScrollView
+    android:id="@+id/activitygoback"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical"
+    tools:context="com.gentlehealthcare.mobilecare.activity.home.PioRecordsActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- title -->
+        <include
+            android:id="@+id/rl_top"
+            layout="@layout/act_form_common_title"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:minHeight="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_patient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:text="病人：某某某"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="时间:2014-01-11 22:22"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="问题:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_cause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="致因:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="目标:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="措施:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_estimatetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="评价时间:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="评价人:************"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="效果评价:************"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/button_action_blue_touch" android:state_pressed="true"/>
+    <item android:drawable="@drawable/button_action_blue" android:state_pressed="false"/>
+    <item android:drawable="@drawable/button_action_appraisl"></item>
+
+</selector>

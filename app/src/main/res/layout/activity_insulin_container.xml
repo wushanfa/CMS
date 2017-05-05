@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_flow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btn_home"
+            style="@style/btn_corner"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_home"/>
+
+        <LinearLayout
+            android:id="@+id/ll_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_home"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bed_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="床号：55"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_normal"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="姓名：李村华"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_normal"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RadioButton
+            android:id="@+id/rg_perform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="待执行1"
+            android:textColor="@color/black_text_title"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/rg_no_perform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="执行中0"
+            android:textColor="@color/black_text_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/lv_right"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:divider="@null"
+        android:scrollbars="none"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_btn"
+        android:layout_below="@+id/rg_tab"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/frame_black"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/btn_left"
+            style="@style/btn_blue_zyy"
+            android:layout_width="76dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="记录"/>
+
+        <Button
+            android:id="@+id/btn_right"
+            style="@style/btn_blue_zyy"
+            android:layout_width="76dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="核对"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        layout="@layout/activity_command_abtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

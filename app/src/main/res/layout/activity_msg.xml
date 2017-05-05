@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_msg"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:background="@color/grey_200"
+    android:orientation="vertical"
+    tools:context="com.gentlehealthcare.mobilecare.activity.msg.MsgAct">
+
+    <RelativeLayout
+        android:id="@+id/rl_msg_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black_text_content"
+            android:textSize="@dimen/text_size_big"
+            android:text="提醒" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_suggestions_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/patinfo_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_patientinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black_text_content"
+            android:textSize="@dimen/text_size_big"
+            android:drawableLeft="@drawable/perm_group_personal_info"
+            android:gravity="center"
+            android:text="1 床  宣鹏" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_big"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/perm_group_system_clock"
+            android:gravity="center"
+            android:textColor="@color/black_text_content"
+            android:text="今天" />
+    </RelativeLayout>
+
+    <com.gentlehealthcare.mobilecare.swipe.view.XListView
+        android:id="@+id/lv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/rl_execute"
+        android:layout_below="@+id/v_line"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_dark"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/v_split_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_400"></View>
+
+    <LinearLayout
+        android:id="@+id/sure_pase"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_sure_msg"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black_text_content"
+            android:text="确定" />
+
+        <View
+            android:id="@+id/v_split"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/grey_400"></View>
+
+        <TextView
+            android:id="@+id/tv_pause"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black_text_content"
+            android:text="暂缓" />
+    </LinearLayout>
+
+</LinearLayout>

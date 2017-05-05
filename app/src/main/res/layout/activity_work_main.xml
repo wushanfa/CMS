@@ -1,0 +1,102 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_work"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/org_blue_background">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="68dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/select_btn_back" />
+
+        <!--<com.gentlehealthcare.nursemobile.view.AutoCallBackTextView-->
+            <!--android:id="@+id/tv_info"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_toRightOf="@+id/btn_back"-->
+            <!--android:background="@color/transparent"-->
+            <!--android:paddingBottom="-5dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textColor="@color/text_normal"-->
+            <!--android:textSize="@dimen/text_size_normal" />-->
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_title"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        layout="@layout/activity_command_abtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true" />
+    <!-- android:layout_above="@+id/ll_command_toolbar" -->
+    <RelativeLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:background="@color/transparent"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rgp_bottom"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="待" />
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="中" />
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="已" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_top">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_work"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

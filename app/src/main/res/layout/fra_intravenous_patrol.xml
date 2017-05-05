@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_fra_icu_hlcs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--正常 & 过快-->
+    <LinearLayout
+        android:id="@+id/ll_nomal_fast"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_nomal"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_button_blue"
+            android:text="@string/nomal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btn_fast"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/skin_btn_frame"
+            android:text="@string/toofast"
+            android:textColor="@color/blue_normal"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+    <!--过慢 & 异常-->
+
+    <LinearLayout
+        android:id="@+id/ll_slow_exception"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_nomal_fast"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_slow"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/skin_btn_frame"
+            android:text="@string/tooslow"
+            android:textColor="@color/blue_normal"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btn_exception"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/skin_btn_frame"
+            android:text="@string/exception"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+    <!--暂停-->
+
+    <LinearLayout
+        android:id="@+id/ll_pause"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_slow_exception"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="155dp"
+            android:layout_weight="1"
+            android:background="@drawable/skin_btn_frame"
+            android:text="@string/pause"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_title"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_pause"
+        android:layout_marginTop="@dimen/top_right_bottom_left_padding"
+        android:background="@color/grey_300">
+
+    </View>
+
+    <LinearLayout
+        android:id="@+id/ll_normal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_patrol_time"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_business_baseinfo_city"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:paddingRight="8dp"
+                android:text="记录时间:"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_patrol_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_business_baseinfo_city"
+                android:background="@null"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:hint="点击选择"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_input_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView_line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_patrol_time"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:background="@color/grey_300" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ps_jg"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/imageView_line1"
+            android:background="@color/white"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_business_baseinfo_name"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:paddingRight="8dp"
+                android:text="皮试结果:"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_ps_jg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_business_baseinfo_name"
+                android:background="@null"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:hint="点击选择"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_input_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_image2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_ps_jg"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:background="@color/grey_300"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_exception"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_input_num"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="已输入量:"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_input_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_input_num"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="点击输入"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:background="@color/grey_300" />
+        <!-- 店铺名称 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_exception"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="异常描述:"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_exception_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_exception"
+                android:background="@null"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:hint="点击选择"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:background="@color/grey_300" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/iv_image2"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_executed"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="结束执行:"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <ToggleButton
+                android:id="@+id/tb_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/switch_button_off"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/select_btn_flow_sure" />
+</RelativeLayout>

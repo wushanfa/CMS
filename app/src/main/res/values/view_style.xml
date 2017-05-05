@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="btn_blue">
+        <item name="android:background">@drawable/skin_btn_blue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_commandblue">
+        <item name="android:background">@drawable/skin_btn_blue_unselect</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_red">
+        <item name="android:background">@drawable/skin_btn_red</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_corner">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="rbtn_bottom">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@drawable/select_color_text_gray_blue</item>
+    </style>
+
+    <style name="tv_prompt_window">
+        <item name="android:textColor">@color/text_green_dark</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+
+</resources>

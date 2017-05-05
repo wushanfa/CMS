@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#1FBAF3" >
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/select_btn_back"
+        android:background="@drawable/skin_btn_tran" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="帮助中心"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+     <ImageButton 
+         android:id="@+id/btn_search"
+         android:layout_width="wrap_content"
+         android:layout_height="45dp"
+         android:layout_centerVertical="true"
+         android:scaleType="centerInside"
+         android:layout_alignParentRight="true"
+         android:src="@drawable/btn_help_search"
+         android:background="#00000000"
+         />
+</RelativeLayout>

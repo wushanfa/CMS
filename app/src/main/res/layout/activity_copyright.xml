@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_copyright"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/frame_black"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/text_green_dark"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/cbox_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:button="@drawable/select_skin_r_style_blue"
+             />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同意"
+            android:textColor="@color/text_normal"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/cbox_agreement"
+            android:layout_alignBaseline="@id/cbox_agreement"
+            android:layout_marginLeft="5dp"
+            />
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/select_skin_btn"
+            android:enabled="false"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="开始"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

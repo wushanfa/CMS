@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="3dp"
+              android:background="@color/white"
+              android:baselineAligned="false"
+              android:orientation="horizontal">
+
+    <!-- left -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="245dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <!-- line one -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/thirtysix"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="36"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/one"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/two"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/three"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/clear"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="×"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <!-- line two -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/thirtyseven"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="37"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/four"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/five"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/six"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/xiangshang"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="↑"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <!-- line three -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/thirtyeight"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="38"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/seven"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="7"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/eight"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="8"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/nine"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="9"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_slash"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="↓"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <!-- line four -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/thirtynine"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="39"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/point"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="."
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/zero"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_e"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="E"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/underline"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <!-- line four -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/forth"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="40"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/g"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="g"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/ml"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ml"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_star"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="*"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/maohao"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=":"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- right -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="245dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- line one -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+        <!-- line two -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

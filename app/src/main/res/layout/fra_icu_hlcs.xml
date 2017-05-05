@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu_hlcs"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_cg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:text="常     规"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_conventional_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_cg"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_ts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:text="特     殊"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_special_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_ts"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_zl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:text="治     疗"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_treatment_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_zl"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_yfhxjxgxfy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:text="预 防 呼 吸 机 相 关 性 肺 炎"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_prevention_pneumonia_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_yfhxjxgxfy"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_custom_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/blue_normal"
+                    android:gravity="center"
+                    android:text="自  定  义"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_zdy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_custom_title"
+                    android:padding="8dp"
+                    android:text="自  定 义1:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_zdy"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/skin_line_gray_sround"
+                    android:gravity="top"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/tv_zdy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_custom"
+                    android:padding="8dp"
+                    android:text="自  定 义2:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_custom2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_zdy2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/skin_line_gray_sround"
+                    android:gravity="top"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/tv_zdy3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_custom2"
+                    android:padding="8dp"
+                    android:text="自  定 义3:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_custom3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_zdy3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/skin_line_gray_sround"
+                    android:gravity="top"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

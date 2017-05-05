@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.gentlehealthcare.mobilecare.activity.cancelexecution.CancelExecutionAct">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/act_common_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/in_title"
+        android:layout_marginRight="@dimen/top_right_bottom_left_padding"
+        android:paddingBottom="@dimen/top_right_bottom_left_padding"
+        android:paddingTop="@dimen/top_right_bottom_left_padding"
+        android:text="取消执行"
+        android:textColor="@color/black_text_title"
+        android:textSize="@dimen/text_size" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_info"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
+
+        <Button
+            android:id="@+id/btn_box"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/btn_check_off_holo_light" />
+
+        <LinearLayout
+            android:id="@+id/ll_context"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_box"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/org_blue_background"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_order_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/yizhuliebiaolizi"
+                android:textColor="@color/black_text_content"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:gravity="right"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_dosage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:textColor="@color/grey_text_content"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="@dimen/indicator_corner_radius"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_order_start_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/v_line2"
+        android:layout_marginLeft="34dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_order_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_order_start"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="05-03 09:29"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_order_operation"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="医生张"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_order_start"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="医嘱开始时间:"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/tv_order_start_time"
+            android:layout_alignBottom="@+id/tv_order_start_time"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_order_end_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/rl_order_start_time"
+        android:layout_marginLeft="34dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_order_end"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="医嘱结束时间:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_order_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_order_end"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_order_end_operation"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="医生张"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line_order"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_order_end_time"
+        android:layout_marginTop="@dimen/indicator_corner_radius"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_start_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/v_line_order"
+        android:layout_marginLeft="34dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_name"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="记录时间:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_start_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_name"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击选择"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_start_time"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@color/grey_300"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_ps_jg"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line2"
+        android:layout_marginLeft="34dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_type"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="皮试结果:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_ps_jg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_type"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击选择"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_input_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_ps_jg"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_rcception_dec"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line3"
+        android:layout_marginLeft="34dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_exception_dec"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="异常描述:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_exception_dec"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_exception_dec"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击选择"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_input_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_rcception_dec"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@color/grey_300" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/select_btn_flow_sure" />
+
+</RelativeLayout>
+
+

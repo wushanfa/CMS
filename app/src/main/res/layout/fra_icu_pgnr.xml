@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="人 工 气 道"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_airway_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_rgqd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_rgqd"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="插                管"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cg"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:numeric="decimal"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_rgqd"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cg_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_jmc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_jmc"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="距门齿 / 鼻尖"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_jmcbj"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_jmc"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_jmcbj_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_qnyl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_qnyl"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="气   囊   压  力"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_qnyl"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_qnyl"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_qnyl_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_airway_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_airway_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_airway_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="动  脉  置  管"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_artery_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_dmzg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_dmzg"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="部               位"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_bw"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_dmzg"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_bw_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_zgts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_zgts"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="置   管  天  数"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_zgts"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_zgts"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_zgts_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_ccc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_ccc"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="穿 刺 处 皮 肤"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_ccpf"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_ccc"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_ccpf_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_zt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_zt"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="状                态"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_zt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_zt"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_zt_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_artery_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_artery_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_artery_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="跌  倒  坠  床"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_fall_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pf"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="评               分"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_pf"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_pf"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_pf_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_fall_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_fall_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_fall_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="C V C"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_cvc_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cvc_bw"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cvc_bw"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="部               位"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cvc_bw"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_cvc_bw"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cvc_bw_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cvc_gzts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cvc_gzts"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="置   管  天   数"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cvc_zgts"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_cvc_gzts"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cvc_zgts_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cvc_tw"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cvc_tw"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="臀               围"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cvc_tw"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_cvc_tw"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cvc_tw_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cvc_ccc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cvc_ccc"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="穿 刺 处 皮 肤"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cvc_cccpf"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_cvc_ccc"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cvc_cccpf_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cvc_zt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cvc_zt"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="状               态"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_cvc_zt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_cvc_zt"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_cvc_zt_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_cvc_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_cvc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_cvc_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="舌 苔 脉 象"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_tongue_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stmx_sz"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_stmx_sz"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="舌               质"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_sz"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_stmx_sz"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_sz_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stmx_st"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_stmx_st"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="舌               苔"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_st"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_stmx_st"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_st_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stmx_m"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_stmx_m"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="4"
+                            android:background="@color/blue_button"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="脉"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/et_icu_number"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="数  值"
+                                android:textColor="@color/threetesttext"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:background="@color/threetesttext" />
+
+                            <EditText
+                                android:id="@+id/et_mai"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:padding="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_stmx_m"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/et_icu_number"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="备     注"
+                            android:textColor="@color/threetesttext"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/threetesttext" />
+
+                        <EditText
+                            android:id="@+id/et_mai_memo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:padding="3dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_tongue_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_tongue_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_tongue_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

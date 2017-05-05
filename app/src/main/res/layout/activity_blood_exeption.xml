@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_blood_exception"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_exception_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/red"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_blood_do"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtn_tab_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/act_blood_exception_bg"
+            android:button="@null"
+            android:checked="true"
+            android:paddingLeft="10dp"
+            android:text="停止执行"
+            android:textColor="@color/act_blood_exception_txt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbtn_tab_yanchi"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/act_blood_exception_bg"
+            android:button="@null"
+            android:paddingLeft="10dp"
+            android:text="间隔2小时再执行"
+            android:textColor="@color/act_blood_exception_txt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbtn_tab_goon"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/act_blood_exception_bg"
+            android:button="@null"
+            android:paddingLeft="10dp"
+            android:text="照常执行"
+            android:textColor="@color/act_blood_exception_txt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbtn_tab_wait"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/act_blood_exception_bg"
+            android:button="@null"
+            android:paddingLeft="10dp"
+            android:text="待医师回复"
+            android:textColor="@color/act_blood_exception_txt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+</LinearLayout>

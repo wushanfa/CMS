@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu_hlpj"
+    android:layout_height="match_parent"
+    android:background="#eaebed"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="常     规"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_changgui_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_oral_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_kqhl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="口 腔 护 理:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_oral"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_kqhl"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_catheter_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_nghl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="尿 管 护 理:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_catheter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_nghl"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_decubitus_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_rchl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="褥 疮 护 理:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_decubitus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_rchl"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_turnback_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_fskb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="翻 身 扣 背:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_turnback"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_fskb"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_changgui_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/detail_changgui_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_changgui_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+            <!--android:text="暂无需要评价的护理内容,请先选择护理措施"-->
+            <TextView
+                android:id="@+id/tv_changgui"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="特     殊"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_teshu_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_xt_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_xt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="吸           痰:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_xt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_xt"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_yswh_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_yswh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="压 缩 雾 化:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_yswh"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_yswh"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_teshu_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/detail_teshu_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_teshu_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_teshu"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="治     疗"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_zhiliao_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_gndl_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_gndl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="功 能 锻 炼:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_gndl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_gndl"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_zyct_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_zytc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="中 药 涂 擦:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_zyct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_zytc"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_qyzl_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_qyzl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="气 压 治 疗:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_qyzl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_qyzl"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_zhiliao_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/detail_zhiliao_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_zhiliao_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_zhiliao"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="预 防 呼 吸 机 相 关 性 肺 炎"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_prevention_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_zswsgf_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_zxswsgf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="遵  循  卫  生  规  范:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_zswsgf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_zxswsgf"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_cttg34d_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_cttg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="床 头 抬 高 30 - 45 度:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_cttg34d"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_cttg"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_xtygwjcz_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_xtygwjcz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="吸 痰 严 格 无 菌 操 作:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_xtygwjcz"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_xtygwjcz"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_qnywc_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_qnywc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="气 囊 压 维 持 30 cmm H2O:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_qnywc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_qnywc"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_smxfmwxy_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_smxfmwxy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="声 门 下 分 泌 物 吸 引:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_smxfmwxy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_smxfmwxy"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_jsqdlns_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_jsqdlns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="及 时 倾 倒 冷 凝 水:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_jsqdlns"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_jsqdlns"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_gdrgqdfql_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_gdrgqdfql"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="固 定 人 工 气 道 防 牵 拉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_gdrgqdfql"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_gdrgqdfql"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_prevention_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/detail_prevention_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_prevention_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_prevention"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="自  定  义"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_custom_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_custom1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_zdy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自  定  义1:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_custom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_zdy"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_custom2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_zdy2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自  定  义2:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_custom2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_zdy2"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_custom3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_zdy3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自  定  义3:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_custom3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/tv_zdy3"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_custom_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/detail_custom_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_custom_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_custom"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/grey_800"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

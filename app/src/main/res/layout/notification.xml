@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 图片 -->
+
+    <ImageView
+        android:id="@+id/im_notification_"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name" />
+    
+    <!-- 所发文字 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120px"
+        android:layout_marginLeft="20px"
+        android:layout_toRightOf="@id/im_notification_"
+        android:gravity="left|center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 通知名 -->
+
+            <TextView
+                android:id="@+id/tv_notification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4px"
+                android:singleLine="true"
+                android:text="测试"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <!-- 时间 -->
+
+            <TextView
+                android:id="@+id/tv_notification_currtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_notification_title"
+                android:gravity="right"
+                android:padding="4px"
+                android:singleLine="true"
+                android:text="测试"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <!-- 文字 -->
+
+        <TextView
+            android:id="@+id/tv_tip_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:padding="4px"
+            android:singleLine="true"
+            android:text="测试"
+            android:textColor="@color/grey_400"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

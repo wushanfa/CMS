@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/root_bloodsugar"
+    tools:context="com.gentlehealthcare.mobilecare.activity.bloodsugar.BloodSugarActivity" >
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="fill_parent"
+        android:layout_height="560dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+    <include
+        android:id="@+id/inc_command_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true"
+        layout="@layout/activity_command_abtoolbar" />
+
+</RelativeLayout>

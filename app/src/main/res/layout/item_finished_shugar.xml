@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/skin_btngray_overdue">
+
+    <!-- 测试时间 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_cssj"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_xtcssj_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="测试时间："
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_xtcssj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_xtcssj_text"
+            android:padding="4dp"
+            android:text="2015-11-28"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <!-- 血糖值 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_xuedaihao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_xtz_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="测试项目："
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_xtz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_xtz_text"
+            android:padding="4dp"
+            android:text="空腹血糖"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    
+        <!-- 血成分 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_xuechengfen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_bcxt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="测试结果："
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_bcxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_bcxt_text"
+            android:padding="4dp"
+            android:text="14.0  高"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- 血型 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_xuexing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_xtbz_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="参考范围："
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_xtbz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_xtbz_text"
+            android:padding="4dp"
+            android:text="超低&lt;2.8&lt;底&lt;3.9-6.1&lt;高&lt;7.0mmol/L"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- 血量 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_xueliang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_hsqm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="护士签名："
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_hsqm_text"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_hsqm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="水根会"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

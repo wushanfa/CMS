@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_transfusion"
+    android:background="@color/grey_background"
+    tools:context="com.gentlehealthcare.mobilecare.transfusion.TransfusioActivity">
+
+    <!-- title -->
+    <include
+        android:id="@+id/trans_select_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- content medicine -->
+    <LinearLayout
+        android:id="@+id/ll_medicine_patrol_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="360dp"
+        android:layout_below="@+id/trans_select_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_bloodproducts"
+        android:layout_below="@+id/trans_select_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:divider="@null"
+        android:background="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

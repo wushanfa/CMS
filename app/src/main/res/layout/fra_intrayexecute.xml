@@ -1,0 +1,288 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_businfo_detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_speed"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="22dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_city"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="滴速:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_city"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="输入滴速"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_speed"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:background="@color/grey_300"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_start_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line"
+        android:layout_marginLeft="22dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_name"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="开始时间:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_start_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_name"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击选择"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_start_time"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_end_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line2"
+        android:layout_marginLeft="22dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_type"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="预计结束时间:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_end_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_type"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击选择"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_input_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_end_time"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_next_time"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line3"
+        android:layout_marginLeft="22dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_business_baseinfo_shangquan"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="下次巡视时间:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_next_patral_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_business_baseinfo_shangquan"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="点击设定"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_input_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_next_time"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:background="@color/grey_300" />
+
+    <RelativeLayout
+        android:id="@+id/rl_patrol_num"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView_line4"
+        android:layout_marginLeft="22dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_patrol_num"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="巡视次数:"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_patrol_num"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_patrol_num"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="点击输入"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_line5"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_patrol_num"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:background="@color/grey_300" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/select_btn_flow_sure" />
+
+</RelativeLayout>

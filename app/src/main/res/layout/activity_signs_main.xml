@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_chooseDatatime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_mainsign_bg"
+                    android:text="2015-04-17"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_chooseTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_mainsign_bg"
+                    android:text="16点"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TableRow
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|end"
+                        android:text="体温："
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_tiwen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|end"
+                        android:text="呼吸："
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_huxi"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="36dp"
+                        android:layout_weight="1" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|end"
+                        android:text="脉搏："
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_maibo"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="36dp"
+                        android:layout_weight="1" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center|end"
+                        android:text="疼痛评分："
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_pingfen"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="36dp"
+                        android:layout_weight="1" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_blue_500"
+                   >
+
+                    <Button
+                        android:id="@+id/btn_chaxun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_search_white_24dp"
+                        android:drawablePadding="4dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="查询"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_blue_500"
+                   >
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_save_white_24dp"
+                        android:drawablePadding="4dp"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="保存"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+            android:gravity="center_vertical">
+
+        <GridView
+            android:id="@+id/gv_signs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_marginBottom="4dp"
+            android:horizontalSpacing="4dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="5"
+            android:verticalSpacing="4dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_liulan"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gridview_itembg"
+                android:text="浏览"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_kongge"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gridview_itembg"
+                android:text="空格"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gridview_itembg"
+                android:text="清除"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gridview_itembg"
+                android:text="确认"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gridview_itembg"
+                android:text="下一床"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

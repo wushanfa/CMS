@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/root_systemattention"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#1FBAF3">
+
+        <Button
+            android:id="@+id/btn_back_1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/select_btn_back"/>
+
+        <TextView
+            android:id="@+id/tv_head_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="交接事项"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_attenttion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:layout_below="@+id/rl_titlebar"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+
+        ></ListView>
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        layout="@layout/activity_command_abtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true"
+
+        />
+</RelativeLayout>

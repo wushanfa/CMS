@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/refuse_injection"
+        android:drawablePadding="10dp"
+        android:gravity="center|left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/black_text_content"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/skin_blue" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/select_skin_white_gray"
+        android:padding="8dp"
+        android:textColor="@drawable/select_color_text_blue_gray"
+        android:textSize="@dimen/text_size_big" />
+
+</LinearLayout>

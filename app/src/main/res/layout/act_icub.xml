@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:id="@+id/root_icub"
+    android:orientation="vertical">
+
+    <!-- 头部标题 -->
+
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_icu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp" />
+
+    <!-- 护理计划 & 护理措施 & 护理评价 & 评估内容 & 骨伤科情况 & 脊柱外科 & 交班小结 -->
+
+    <com.gentlehealthcare.mobilecare.view.HorizontalListView
+        android:id="@+id/navbar_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_icu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"></FrameLayout>
+
+
+</LinearLayout>

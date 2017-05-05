@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/skin_blue"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_message4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="描述出现的输血状况"
+        android:textColor="@color/black_text_content"
+        android:textSize="@dimen/text_size"/>
+
+    <EditText
+        android:id="@+id/et_other"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="3dp"
+        android:textSize="16sp">
+
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue_normal"
+        />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/select_skin_white_gray"
+        android:padding="8dp"
+        android:text="确定"
+        android:textColor="@drawable/select_color_text_blue_gray"
+        android:textSize="@dimen/text_size_title"/>
+
+</LinearLayout>

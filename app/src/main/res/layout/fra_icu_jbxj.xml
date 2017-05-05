@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/root_fra_icu_jbxj"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="交 班 小 结"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="400dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/skin_line_gray_sround"
+                    android:gravity="left"
+                    android:hint="请输入交班情况" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

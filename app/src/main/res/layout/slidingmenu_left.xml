@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/transparent_gray">
+        <TextView
+                android:id="@+id/tv_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/blue_normal"
+                android:textSize="@dimen/text_size_title" />
+
+        <Button
+                android:id="@+id/btn_slidingmenu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/skin_home" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/skin_white" >
+
+        <ListView
+            android:id="@+id/lv_sliding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/gray_dark"
+            android:dividerHeight="1px"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

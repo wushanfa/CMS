@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/org_blue_background">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_btn_back"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_pat_name"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="龚建三 85岁 10床"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_find_next_holo_dark"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

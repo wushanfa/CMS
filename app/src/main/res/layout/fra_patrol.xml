@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_fra_patrol"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="560dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 头部标题信息 -->
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 血品信息 -->
+
+    <LinearLayout
+        android:id="@+id/ll_patrol"
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_below="@+id/in_title"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_medicineinfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:singleLine="true"
+                android:text="0.9%氯化钠注射液[250ml/袋]"
+                android:textColor="@color/black_text_content"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_medicineother"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="2单位"
+                android:textColor="#212121"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_xuedaihao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/skin_circle_blue"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/apply_no"
+                android:textColor="@color/circuit_piece"/>
+
+            <TextView
+                android:id="@+id/tv_xuexing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/skin_circle_blue"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:maxLines="1"
+                android:text="@string/yang_xing"
+                android:textColor="@color/circuit_piece"/>
+
+            <TextView
+                android:id="@+id/tv_xueliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/circuit_piece"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/two_dan_wei"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_order_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/circuit_piece"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="留置针"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_order_insulin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/circuit_piece"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="30IU"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/tso_obverse_station" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:text="巡视时间"
+                android:textColor="@color/black_text_content"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/black_text_content"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="输血开始时间:"
+                    android:textColor="@color/black_text_content"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_tras_time1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    android:text="09点49分00"
+                    android:textColor="@color/black_text_title"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_first_patral"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tras_time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首次巡视时间:"
+                    android:textColor="@color/black_text_content"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_tras_time2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    android:text="09点49分00"
+                    android:textColor="@color/black_text_title"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/last_patral_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余巡视时间:"
+                    android:textColor="@color/black_text_content"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_tras_time3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    android:text="09点49分00"
+                    android:textColor="@color/black_text_title"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_look_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_patrol"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/btn_look"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/select_button_blue"
+            android:text="@string/look"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/select_button_blue"
+            android:text="继续输血"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/btn_patrolsure"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_button_blue"
+            android:text="@string/bloodend"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_msg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@color/gray_holo_light"
+    android:layout_alignParentBottom="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"></View>
+
+    <com.gentlehealthcare.mobilecare.swipe.view.XListView
+        android:id="@+id/lv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_execute"
+        android:layout_below="@+id/v_line"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_dark"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+</LinearLayout>

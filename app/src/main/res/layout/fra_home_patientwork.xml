@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RadioGroup
+            android:id="@+id/rg_tab_list"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+        <RadioButton
+                android:id="@+id/rbtn_medicine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="给药"
+                android:padding="10dp"
+                android:textColor="@color/check_txt_color"
+                android:background="@drawable/check_txt_bg"
+                />
+        <RadioButton
+                android:id="@+id/rbtn_insulin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="胰岛素"
+                android:padding="10dp"
+                android:textColor="@color/check_txt_color"
+                android:background="@drawable/check_txt_bg"
+                />
+        <RadioButton
+                android:id="@+id/rbtn_bloodtest"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="血糖"
+                android:padding="10dp"
+                android:textColor="@color/check_txt_color"
+                android:background="@drawable/check_txt_bg"
+                />
+
+    </RadioGroup>
+        <TextView android:layout_width="1dp" android:layout_height="fill_parent" android:background="@color/black"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+            android:divider="@null"
+            />
+
+</LinearLayout>

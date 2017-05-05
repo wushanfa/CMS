@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_patientwork"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_corner"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_home" />
+
+        <com.gentlehealthcare.mobilecare.view.AutoCallBackTextView
+            android:id="@+id/tv_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn_back"
+            android:background="@color/transparent"
+            android:paddingBottom="-5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/ll_top"
+            android:layout_above="@+id/ll_command_toolbar"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+            android:divider="@null"
+            />
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true"
+        layout="@layout/activity_command_abtoolbar" />
+
+</RelativeLayout>

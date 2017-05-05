@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/flag_select"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/btn_check"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_check_off_holo_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ll_tar"
+        android:layout_toRightOf="@+id/ll_btn"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/yizhuliebiaolizitou"
+            android:textColor="@color/org_blue_background"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_order_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/yizhuliebiaolizi"
+            android:textColor="@color/black_text_content"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tar"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_record"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/select_order_record" />
+
+        <TextView
+            android:id="@+id/tv_dosage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="right"
+            android:text="100ML"
+            android:textColor="@color/grey_text_content"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

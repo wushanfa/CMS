@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_deptment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#1FBAF3">
+
+        <Button
+            android:id="@+id/btn_back_1"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/select_btn_back" />
+
+        <TextView
+            android:id="@+id/tv_head_1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="4dp"
+            android:text="科室病人"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_patients"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:layout_below="@+id/rl_titlebar"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:padding="2dp"
+        android:smoothScrollbar="true" />
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        layout="@layout/activity_command_abtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

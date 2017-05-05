@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+              android:background="@drawable/skin_blue"
+              android:gravity="center"
+              android:orientation="vertical" >
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/skin_about"
+            android:gravity="center|left"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/skin_blue"
+            android:textSize="@dimen/text_size_normal" />
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <LinearLayout
+                android:id="@+id/ll_custom_edittext1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+            <TextView
+                    android:id="@+id/tv_title1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_normal"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    />
+            <EditText
+                    android:id="@+id/et_conent1"
+                    android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="3"
+                      android:textColor="@color/text_normal"
+                    />
+            </LinearLayout>
+        <LinearLayout
+                android:id="@+id/ll_custom_edittext2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+            <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_normal"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+
+                    />
+            <EditText
+                    android:id="@+id/et_conent2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textColor="@color/text_normal"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btn_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/select_skin_white_gray"
+                android:padding="10dp"
+                android:textColor="@drawable/select_color_text_blue_gray"
+                android:textSize="@dimen/text_size_normal" />
+
+        <Button
+                android:id="@+id/btn_right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_skin_white_gray"
+                android:padding="10dp"
+                android:textColor="@drawable/select_color_text_blue_gray"
+                android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+</LinearLayout>

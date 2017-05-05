@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    useLibrary 'org.apache.http.legacy'
+    android{compileOptions.encoding="UTF-8"}
+    defaultConfig {
+        applicationId "com.gentlehealthcare.mobilecare"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':library')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/sun.misc.BASE64Decoder.jar')
+    compile files('libs/slidingmenu.jar')
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

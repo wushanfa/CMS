@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toast_contact_operations">通知列表加载失败，请联系运维</string>
+    <string name="act_my_notice">我的通知</string>
+    <string name="notice_template_name">静脉给药</string>
+    <string name="notice_time_exp">6个小时前</string>
+    <string name="notice_content_exp">袁献华正在输血,2个单位的输A型（RH+）去白细胞红细胞,2单位，病人袁献华输血30分钟</string>
+    <string name="notice_template_name_exp">静脉给药</string>
+    <string name="title_activity_add_pio">增加PIO</string>
+    <string name="title_activity_icu">增加ICU记录</string>
+    <string name="title_activity_orders">科室病人－医嘱</string>
+    <string name="tb_munion_tip_download_prefix">正在下载:</string>
+    <string name="title_activity_pio">科室病人－PIO</string>
+    <string name="title_activity_pio_records">护理记录</string>
+    <string name="blood_sugar_patient_bed_number_exp">床号：36</string>
+    <string name="blood_sugar_patient_name_exp">姓名：潘永红</string>
+    <string name="blood_sugar_project">项 目:</string>
+    <string name="blood_sugar_numerical"><![CDATA[血  糖  值:]]></string>
+    <string name="blood_sugar_unit">mmol/L</string>
+    <string name="blood_sugar_notice_first">病人血糖值</string>
+    <string name="blood_sugar_notice_second">高于</string>
+    <string name="blood_sugar_notice_third">异常值，病人医师</string>
+    <string name="blood_sugar_switch_first">待执行0</string>
+    <string name="blood_sugar_switch_second">执行中0</string>
+</resources>

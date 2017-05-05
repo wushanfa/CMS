@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_plan_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_plan_time"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey_text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计划:05-03 08:54" />
+
+        <RelativeLayout
+            android:id="@+id/rl_start_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="实际:05-03 08:54"
+                android:textColor="@color/grey_text_content" />
+
+            <TextView
+                android:id="@+id/tv_nurser_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/top_right_bottom_left_padding"
+                android:textColor="@color/grey_text_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_list_record"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/indicator_right_padding">
+
+        <ListView
+            android:id="@+id/lv_time_pj_nursername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/indicator_right_padding"
+            android:divider="@null">
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

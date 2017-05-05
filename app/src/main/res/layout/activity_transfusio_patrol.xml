@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_transpatrol"
+    android:background="@color/grey_background"
+    tools:context="com.gentlehealthcare.mobilecare.transfusion.TransfusioActivity">
+
+    <!-- title -->
+    <include
+        android:id="@+id/trans_select_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trans_select_title"
+        android:background="@drawable/transfusion_table_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_look"
+            style="@style/patrol_tab"
+            android:text="观察" />
+
+        <RadioButton
+            android:id="@+id/rb_tpr"
+            style="@style/patrol_tab"
+            android:text="TPR" />
+
+        <RadioButton
+            android:id="@+id/rb_speed"
+            style="@style/patrol_tab"
+            android:text="滴速" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_patrol_end_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_tab"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/green_600"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_patrol_content"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_below="@+id/tv_patrol_end_time" />
+
+    <Button
+        android:id="@+id/btn_tras_end"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/fl_patrol_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/select_button_blue"
+        android:text="结束输血"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</RelativeLayout>

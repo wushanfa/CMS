@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="560dp"
+    android:orientation="vertical"
+    android:id="@+id/root_fra_tras_check">
+
+    <!-- 头部标题信息 -->
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/trastitle" />
+
+    <RelativeLayout
+        android:id="@+id/fl_container_"
+        android:layout_below="@+id/in_title"
+        android:layout_width="fill_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/frame_black"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 3查 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_threecheck"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" >
+
+            <TextView
+                android:id="@+id/tv_three_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="3查"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageView
+                android:id="@+id/btn_left_"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_three_check"
+                android:background="@color/blue_200"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_three_check"
+                android:background="@color/blue_200"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_three_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_threecheck"
+            android:layout_marginTop="4dp" >
+
+            <Button
+                android:id="@+id/btn_xiaoqi"
+                android:layout_width="100dp"
+                android:layout_height="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="效  期"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/btn_zhiliang"
+                android:layout_width="100dp"
+                android:layout_height="54dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/blue_spin"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/btn_baozhuang"
+                android:layout_width="100dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/blue_spin"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+        </RelativeLayout>
+
+        <!-- 8对 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_eight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_three_tv"
+            android:layout_marginTop="16dp" >
+
+            <TextView
+                android:id="@+id/tv_eight_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="8对"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_eight_check"
+                android:background="@color/blue_200"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_eight_check"
+                android:background="@color/blue_200"
+                android:gravity="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <!-- 姓名 & 床号 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_name_bed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_eight"
+            android:layout_marginTop="4dp" >
+
+            <Button
+                android:id="@+id/btn_name"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="姓  名"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_bed"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="床  号"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <!-- 病历号 & 血袋号 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_bingli_xuedai"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_name_bed"
+            android:layout_marginTop="8dp" >
+
+            <Button
+                android:id="@+id/btn_bingli"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="ID 号"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_xuedai"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="血 袋号"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+        <!-- 血型 & 血品 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_xuexing_xuepin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bingli_xuedai"
+            android:layout_marginTop="8dp" >
+
+            <Button
+                android:id="@+id/btn_xuexing"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="血  型"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_xuepin"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="血成分"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <!-- 配血& 血量 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_peixue_xueliang"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_xuexing_xuepin"
+            android:layout_marginTop="8dp" >
+
+            <Spinner
+                android:id="@+id/btn_peixue"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/blue_spin_big"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/btn_xueliang"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/skin_btn_blue_inital"
+                android:gravity="center"
+                android:text="血  量"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_container_"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <Button
+            android:layout_width="76dp"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/skin_btn_blue_zyy"
+            android:gravity="center"
+            android:text="执 行"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="80dp"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_button_blue"
+            android:gravity="center"
+            android:text="核 对"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+    </RelativeLayout>
+
+</RelativeLayout>

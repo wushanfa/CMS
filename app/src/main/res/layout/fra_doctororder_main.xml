@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_doctororder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_common_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_today"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_mainsign_bg"
+            android:text="基础查询"
+            android:textSize="14sp" />
+        <!--
+        <Button
+            android:id="@+id/btn_today"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_mainsign_bg"
+            android:text="基础查询"
+            android:textSize="12sp"/>
+         -->
+
+        <Button
+            android:id="@+id/btn_template"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_mainsign_bg"
+            android:text="流程类型"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_order_class"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_mainsign_bg"
+            android:text="医嘱类型"
+            android:textSize="14sp" />
+        <!--
+        <Button
+            android:id="@+id/btn_order_class"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_mainsign_bg"
+            android:text="医嘱类型"
+            android:textSize="12sp"/>
+        -->
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/elv_doctororder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/rl_top"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_dark"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+
+</RelativeLayout>

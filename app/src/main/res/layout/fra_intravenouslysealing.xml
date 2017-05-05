@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_fra_patrol"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 头部标题信息 -->
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!-- 血品信息 -->
+
+    <LinearLayout
+        android:id="@+id/ll_patrol"
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_below="@+id/in_title"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical">
+
+        <!--正常 & 过快-->
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/ll_nomal_fast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_nomal"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/nomal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:background="@drawable/select_button_blue"/>
+            <Button
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue_normal"
+                android:id="@+id/btn_fast"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:textSize="@dimen/text_size_title"
+                android:layout_weight="1"
+                android:background="@drawable/skin_btn_frame"
+                android:text="@string/toofast"/>
+        </LinearLayout>
+
+        <!--过慢 & 异常-->
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/ll_slow_exception"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_slow"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textColor="@color/blue_normal"
+                android:textSize="@dimen/text_size_title"
+                android:background="@drawable/skin_btn_frame"
+                android:text="@string/tooslow"/>
+            <Button
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btn_exception"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_title"
+                android:background="@drawable/skin_btn_frame"
+                android:text="@string/exception"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+        <!--暂停-->
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/ll_pause"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="180dp"
+                android:id="@+id/btn_pause"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_title"
+                android:background="@drawable/skin_btn_frame"
+                android:text="@string/pause"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skin_btnblue_normal"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="2016-02-02 08:20"
+                    android:textColor="@color/three_eight_red"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_check_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/flow_checkmark"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black_text_content"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_medicineinfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:text="0.9%氯化钠注射液[250ml/袋]"
+                    android:textColor="@color/black_text_content"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_medicineother"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Qd"
+                    android:textColor="#212121"
+                    android:textSize="15sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_xuedaihao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/circuit_piece"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Qd"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_xuexing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/circuit_piece"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="40滴/分"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_xueliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/circuit_piece"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="静滴"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_order_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/circuit_piece"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="留置针"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_order_insulin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/circuit_piece"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="30IU"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_tras_time1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_title"/>
+
+            <TextView
+                android:id="@+id/tv_tras_time2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_title"/>
+
+            <TextView
+                android:id="@+id/tv_tras_time3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_title"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_look_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_patrol"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_patrolsure"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/select_button_blue"
+            android:text="@string/sealing"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

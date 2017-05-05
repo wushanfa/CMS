@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu_io"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/template_sv"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 治疗 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_zhiliao"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="治疗/饮食："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_zhiliao"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="15"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+
+            <!-- 药物 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_yaowu"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="药         物："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_yaowu"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="17"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+            <!-- 血液 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_xueye"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="血         液："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_xueye"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="17"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+            <!-- 胃肠 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                 <Button
+                    android:id="@+id/btn_weichang"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="胃         肠："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_weichang"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="17"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+            <!-- 泵入药物 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_bengruyaowu"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="泵入 药物："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_benruyaowu"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="17"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_200" />
+
+            <!-- 出量 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                 <Button
+                    android:id="@+id/btn_chuliang"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="30"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="出         量："
+                    android:singleLine="true"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_out"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="17"
+                    android:background="@null"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="6"
+                    android:text="ml"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/threetestline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false" >
+
+        <TextView
+            android:id="@+id/pagenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="第三页/共三页"
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/line_grey"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/switchpre_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_pre" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchpre_img"
+                android:layout_centerHorizontal="true"
+                android:text="上一位置"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/switchpre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/line_grey"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/next_ll"
+            android:background="@color/grey_300" />
+
+        <RelativeLayout
+            android:id="@+id/next_ll"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/save_ll"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/switchnext_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_next" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchnext_img"
+                android:layout_centerHorizontal="true"
+                android:text="下一位置"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/switchnext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

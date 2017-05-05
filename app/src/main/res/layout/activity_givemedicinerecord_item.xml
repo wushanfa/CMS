@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+
+    <TextView
+        android:id="@+id/tv_patientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="小王"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tv_bedno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="( A0010 )"
+        android:layout_toRightOf="@+id/tv_patientname"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+    
+    <TextView 
+        android:id="@+id/tv_medicinename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_toRightOf="@+id/tv_bedno"
+        android:gravity="right"
+        android:text="氨基酸"
+         android:textSize="18sp"
+           android:textColor="@color/black"
+          android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+         android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/tv_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始：2015-3-12 17：08"
+        android:layout_below="@+id/tv_medicinename"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+         android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        />
+     <TextView
+        android:id="@+id/tv_visitstime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始：2015-3-12 17：08"
+        android:layout_below="@+id/tv_starttime"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+         android:layout_alignParentRight="true"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

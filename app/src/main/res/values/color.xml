@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_gray">#AAEEEEEE</color>
+    <color name="transparent_gray_deepen">#AAAAAAAA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="text_normal">#555555</color>
+    <color name="text_green_dark">#006600</color>
+    <color name="blue_normal">#29b5d9</color>
+    <color name="blue_pressed">#0074A6</color>
+    <color name="gray_dark">#E1E1E1</color>
+    <color name="pink">#AAFF4477</color>
+    <color name="yellow">#AAFFB646</color>
+    <color name="grade_1">#FF0000</color>
+    <color name="grade_2">#0000ff</color>
+    <color name="grade_3">#00ff00</color>
+    <color name="grade_4">#ff00ff</color>
+    <color name="timegreen">#76EE00</color>
+
+    <color name="orange">#FF6100</color>
+
+    <color name="command_blue">#08B7DD</color>
+    <color name="command_orange">#FF6666</color>
+    <color name="medicine_item_bg_1">#f4bb90</color>
+
+    <color name="medicine_item_bg_2">#d0b9ff</color>
+
+    <color name="home_gridview_text">#7474d1</color>
+    <color name="home_gridview_sum">#00b1f1</color>
+
+    <color name="list_biaodan_item">#bdebf5</color>
+    
+    <color name="threetestbackgroud">#ebdbc7</color>
+    <color name="thredtestfragbackgroud">#f5f1e7</color>
+    <color name="threetesttextcolor">#f8c5bd</color>
+    <color name="threetesttextcolornormal">#3e3e3e</color>
+    <color name="threetestline">#dbdbdb</color>
+    <color name="threetesttext">#526d78</color>
+    <color name="threetestwriter">#7e9100</color>
+    <color name="btn_green">#A7DD5F</color>
+    <color name="btn_blue_pio_choosen">#3498db</color>
+    <color name="btn_blue_pio_not_choosen">#881FBAF3</color>
+    <color name="blue_button">#19c3d0</color>
+
+    <color name="three_eight_red">#fb5240</color>
+    <color name="three_eight_green">#36c77b</color>
+    <color name="three_eight_blue">#0080ff</color>
+
+    <color name="org_blue_background">#1FBAF3</color>
+    <color name="org_deep_blue_background">#3498db</color>
+    <color name="grey_background">#f2f2f2</color>
+    <color name="blue_background">#0099ff</color>
+    <color name="grey_text">#5e5e5e</color>
+    <color name="blue_text">#0099ff</color>
+    <color name="black_text_title">#333333</color>
+    <color name="black_text_content">#454545</color>
+    <color name="grey_text_content">#797979</color>
+    <color name="pop_windows_alpha">#44b6b6b6</color>
+    <color name="button_pressed">#d3d3d3</color>
+
+    <color name="circuit_background">#3dbff0</color>
+    <color name="circuit_piece">#2ba3d5</color>
+    
+    <color name="black_rectangle">#595757</color>
+    <color name="green_rectangle">#92c153</color>
+    <color name="backgroundColor">#E8E8E0</color>
+    <color name="backgroundColorPress">#DBDBD3</color>
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_flow"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_flow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_flowcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:id="@+id/lv_right"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_corner"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_home" />
+
+        <Button
+            android:id="@+id/btn_patientflow"
+            style="@style/btn_corner"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/iv_backSheet"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:background="@color/transparent_gray"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_patient_help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/skin_help" />
+
+        <RadioGroup
+            android:id="@+id/rgp_bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="药" />
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="注" />
+
+            <RadioButton
+                style="@style/rbtn_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="历" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/btn_patient_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/skin_query" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_command_toolbar"
+        layout="@layout/activity_command_abtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="108px"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

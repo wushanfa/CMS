@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_fra_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_pishi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame_black"
+        android:padding="5dp"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size_normal"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab_list"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rbtn_insulin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_txt_bg"
+            android:button="@null"
+            android:padding="10dp"
+            android:text="胰岛素"
+            android:textColor="@color/check_txt_color" />
+
+        <RadioButton
+            android:id="@+id/rbtn_bloodtest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_txt_bg"
+            android:button="@null"
+            android:padding="10dp"
+            android:text="血糖"
+            android:textColor="@color/check_txt_color" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:divider="@null"
+        android:dividerPadding="5dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:padding="2dp"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

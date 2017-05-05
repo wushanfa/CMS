@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="地塞米松磷酸钠注射液（5mg;1ml*10支）"
+                android:textColor="@color/black_text_content"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_administration_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_content_layout"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_jigndi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="类型:静滴"
+            android:textColor="@color/black_text_content"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_pinci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="频次：Qd"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black_text_content"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:text="医师：王秋生"
+            android:textColor="@color/black_text_content"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_icu_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+       android:layout_marginLeft="15dp"
+        android:layout_below="@+id/ll_administration_layout"
+        android:background="@color/black_text_content"
+        android:visibility="gone"/>
+
+</RelativeLayout>

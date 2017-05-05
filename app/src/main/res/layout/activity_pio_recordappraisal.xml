@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_piorecordappraisal"
+    tools:context="com.gentlehealthcare.mobilecare.activity.home.PioRecordsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.gentlehealthcare.mobilecare.activity.home.AddPioActivity">
+
+        <!-- title -->
+        <include
+            android:id="@+id/rl_top"
+            layout="@layout/act_form_common_title"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/myrelative"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/rl_hulipingjia"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#3498db">
+
+                <Button
+                    android:id="@+id/btn_pingjia"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_color_btn_pio_add_stroke_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_huliyuanyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="right"
+                    android:text="护理评价"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/pio_nursing_appraisal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/select_btn_add" />
+
+                <ImageView
+                    android:id="@+id/iv_huliyuanyin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pio_had_choosen"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gentlehealthcare.mobilecare.view.NoScrollListView
+                android:id="@+id/elv_pio_appraisal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_hulipingjia"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/gray_dark"
+                android:dividerHeight="1dp"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="待评价PIO内容"
+            android:textSize="18sp" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_patient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:text="病人：某某某"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="时间：2014-01-11 22:22"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="问题：************"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_cause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="致因：************"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="目标：************"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="措施：************"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

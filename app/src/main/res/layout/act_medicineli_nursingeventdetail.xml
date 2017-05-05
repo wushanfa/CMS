@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#1FBAF3"
+            android:layout_alignParentTop="true"
+            >
+        <Button
+                android:id="@+id/btn_back_1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/select_btn_back" />
+
+        <TextView
+                android:id="@+id/tv_head_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="护理事件明细"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+    </RelativeLayout>
+<ListView
+        android:id="@+id/lv_nursingeventdetail"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:layout_below="@+id/rl_top"
+        ></ListView>
+    <include
+            android:id="@+id/ll_command_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/activity_command_toolbar"
+            />
+</RelativeLayout>

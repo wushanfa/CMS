@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="执 行 时 间"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_time_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginLeft="15dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll_time_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time_line"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_time_yest"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="昨天"
+                android:textSize="14sp"
+                />
+
+            <RadioButton
+                android:id="@+id/btn_time_today"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="今天"
+                android:checked="true"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_time_torr"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="明天"
+                android:textSize="14sp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_time_layout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="医 嘱 类 别"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_repeat_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_repeat"
+        android:layout_marginLeft="15dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll_repeat_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_repeat_line"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btn_repeat_all"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="全部"
+                android:checked="true"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_repeat_enduring"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="长期"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_repeat_temporary"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="临时"
+                android:textSize="14sp"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_repeat_layout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="执 行 状 态"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_status_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_status"
+        android:layout_marginLeft="15dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll_status_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_status_line"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/btn_status_perform_all"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="全 部 "
+                android:checked="true"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_status_perform_yes"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="已 执 行"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_status_performing"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="执 行 中"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/btn_status_perform_no"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="未 执 行"
+                android:textSize="14sp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ll_status_layout"
+        android:layout_centerHorizontal="true"
+        android:text="确定"/>
+
+
+</RelativeLayout>

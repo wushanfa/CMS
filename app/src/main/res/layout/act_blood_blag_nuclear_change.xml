@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_doctororder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/org_blue_background">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_btn_back" />
+
+        <TextView
+            android:id="@+id/tv_pat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/btn_back"
+            android:text="血品核收"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+    </RelativeLayout>
+
+
+    <!--<ListView-->
+        <!--android:id="@+id/lv_orders"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/rl_title"-->
+        <!--android:cacheColorHint="@color/transparent"-->
+        <!--android:divider="@color/gray_dark"-->
+        <!--android:dividerHeight="1px"-->
+        <!--android:groupIndicator="@null"-->
+        <!--android:scrollbars="none" />-->
+    <com.gentlehealthcare.mobilecare.swipe.view.XListView
+        android:id="@+id/lv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_dark"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+
+</RelativeLayout>

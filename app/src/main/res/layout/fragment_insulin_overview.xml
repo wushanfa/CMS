@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_fra_overview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_start_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line2"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_start_time_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_right_bottom_left_padding"
+            android:text="开始:"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_start_time_begin"
+            android:singleLine="true"
+            android:text="05-03 08:45"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_nurser_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_right_bottom_left_padding"
+            android:text="武文娟"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line3"
+        android:layout_width="1dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/rl_start_time"
+        android:layout_marginLeft="50dp"
+        android:background="@color/org_blue_background"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_patrol_time1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line3"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_start_time1_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_right_bottom_left_padding"
+            android:text="巡视:"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_start_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_start_time1_begin"
+            android:singleLine="true"
+            android:text="05-03 08:45"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_pj"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_right_bottom_left_padding"
+            android:layout_toRightOf="@+id/tv_start_time1"
+            android:maxLines="2"
+            android:text="膝部疼痛缓解"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_nurser_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_right_bottom_left_padding"
+            android:text="武文娟"
+            android:textColor="@color/grey_text_content"
+            android:textSize="@dimen/text_size"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line4"
+        android:layout_width="1dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/rl_patrol_time1"
+        android:layout_marginLeft="50dp"
+        android:background="@color/org_blue_background"/>
+
+    <ListView
+        android:id="@+id/lv_time_pj_nursername"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line4"
+        android:clickable="false"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:layout_marginLeft="50dp"/>
+
+
+</LinearLayout>

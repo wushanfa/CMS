@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_normal">25sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="top_right_bottom_left_padding">8dp</dimen>
+
+
+</resources>

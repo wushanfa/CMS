@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_fra_patrol_count"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_checkmedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_medicine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_black"
+            android:cacheColorHint="@color/transparent"
+            android:listSelector="@color/transparent" />
+
+        <Button
+            android:id="@+id/btn_huanyao"
+            style="@style/btn_commandblue"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lv_medicine"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="换液"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_saomiao"
+            style="@style/btn_red"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lv_medicine"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="扫描" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_injectionTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="注射于\n开始"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_count_down1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_count_down2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注意事项："
+            android:textColor="@color/text_normal"
+            android:textSize="25sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="470dp"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <!-- 血品信息 -->
+
+    <LinearLayout
+        android:id="@+id/ll_patrol"
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical" >
+
+        <!-- 血品信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skin_btnblue_normal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- administration -->
+
+            <RelativeLayout
+                android:id="@+id/rl_admin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_xuedaihao_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="administration:"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/tv_xuedaihao_text"
+                    android:padding="4dp"
+                    android:text="xdh7855485"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- orderText -->
+
+            <RelativeLayout
+                android:id="@+id/rl_ordertext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_xuexing_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="药   品:"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_ordertext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/tv_xuexing_text"
+                    android:padding="4dp"
+                    android:text="xdh7855485"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <!-- speed -->
+
+            <RelativeLayout
+                android:id="@+id/rl_speed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_speed_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="滴   速:"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/tv_speed_text"
+                    android:padding="4dp"
+                    android:text="xdh7855485"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- injectionTool -->
+
+            <RelativeLayout
+                android:id="@+id/rl_injectionTool"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_injectionTool_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="器   械:"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_injectionTool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/tv_injectionTool_text"
+                    android:padding="4dp"
+                    android:text="xdh7855485"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_checkmedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_huanxue"
+                style="@style/btn_commandblue"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="换血" />
+
+            <Button
+                android:id="@+id/btn_saomiao_"
+                style="@style/btn_red"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="扫描" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_tras_time1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="开始时间:"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tv_tras_time2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="预计结束时间:"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tv_tras_time3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="剩余:"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_look_sure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/btn_end"
+                android:background="@drawable/skin_btn_blue_zyy"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="50dp"
+                android:textSize="@dimen/text_size_title"
+                android:text="结束冲管" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_alignParentTop="true"
+    android:background="@color/org_blue_background">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/select_btn_back"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_pat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="left"
+        android:layout_toRightOf="@+id/btn_back"
+        android:text="孙大美"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_sex_bed_patcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_patient"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="男"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_bed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:layout_toRightOf="@+id/tv_sex"
+                android:drawableRight="@drawable/ic_find_next_holo_dark"
+                android:text="12床"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_pat_code"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_back"
+            android:text="0000456789"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_menu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/select_btn_more_info"
+        android:paddingRight="8dp" />
+
+</RelativeLayout>

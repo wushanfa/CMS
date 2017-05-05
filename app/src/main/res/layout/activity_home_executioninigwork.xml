@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants"
+        >
+    <TextView
+            android:id="@+id/tv_executioningwork_name"
+            android:text="姓名"
+           style="@style/executioningworkTable"/>
+    <TextView
+            android:id="@+id/tv_executioningwork_bedno"
+            android:text="床号"
+            style="@style/executioningworkTable"/>
+    <TextView
+            android:id="@+id/tv_executioningwork_worktype"
+            android:text="类别"
+            style="@style/executioningworkTable"/>
+    <TextView
+            android:id="@+id/tv_executioningwork_workname"
+            android:text="项目"
+            style="@style/executioningworkTable"/>
+    <TextView
+            android:id="@+id/tv_executioningwork_starttime"
+            android:text="执行"
+            style="@style/executioningworkTable"/>
+    <TextView
+            android:id="@+id/tv_executioningwork_visittime"
+            android:text="巡视"
+            style="@style/executioningworkTable"/>
+    <LinearLayout android:layout_weight="1"  android:layout_height="fill_parent" android:layout_width="0dp" android:orientation="horizontal">
+        <TextView android:id="@+id/tv_executioningwork_do"
+                android:text="操作"
+                style="@style/executioningworkTable"/>
+        <ImageView   android:id="@+id/iv_clock"
+
+                    style="@style/executioningworkTable"
+                    android:layout_gravity="center"
+                     android:src="@drawable/skin_clock" />
+        <ImageButton
+                android:id="@+id/btn_forward"
+               style="@style/executioningworkTable"
+                android:src="@drawable/skin_forward_details"
+                android:background="@null"
+                android:focusable="false"
+                />
+    </LinearLayout>
+</LinearLayout>

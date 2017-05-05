@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_fra_tpr_sp_look"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 头部标题信息 -->
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- 左侧菜单按钮 -->
+
+        <RadioGroup
+            android:id="@+id/rg_tab_list"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbtn_tpr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@color/grey_200"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="6dp"
+                android:paddingTop="4dp"
+                android:text="T\nP\nR"
+                android:textColor="@color/check_txt_color"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_speed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@color/grey_200"
+                android:button="@null"
+                android:padding="6dp"
+                android:text="滴速 "
+                android:textColor="@color/check_txt_color"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_look"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:button="@null"
+                android:padding="6dp"
+                android:text="观察 "
+                android:background="@drawable/check_txt_bg"
+                android:textColor="@color/check_txt_color"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_chongguan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/check_txt_bg"
+                android:button="@null"
+                android:padding="6dp"
+                android:text="冲管 "
+                android:textColor="@color/check_txt_color"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <!-- 背景写着这。 -->
+            <LinearLayout
+                android:id="@+id/ll_"
+                android:layout_width="fill_parent"
+                android:layout_height="410dp"
+                android:layout_marginRight="14dp"
+                android:background="@color/list_biaodan_item"
+                android:orientation="vertical">
+
+                <!-- TPR -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_tpr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <!-- 体温 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_tiwen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="体温:"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/tv_item_fyh_type_"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:digits="1234567890."
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="25sp" />
+
+                            <requestFocus />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/black"
+                                android:paddingTop="3dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="2"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=" ℃"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <!-- 心跳 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_xintiao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_tiwen"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_name2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="脉搏:"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="6"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/tv_item_fyh_type_2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:digits="1234567890."
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/black"
+                                android:paddingTop="3dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_unit2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="次/分"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+                    <!-- 呼吸 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_huxi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_xintiao"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_name3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="呼吸:"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="6"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/tv_item_fyh_type_3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:digits="1234567890."
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/black"
+                                android:paddingTop="3dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_unit3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10px"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="次/分"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/tv_sure_tpr"
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/select_button_blue"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <!-- 滴速 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/tv_disu_text_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_disu_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:text="初始输血滴速，"
+                            android:textSize="33sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_disu_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:text="请设置每分钟"
+                            android:textSize="33sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_disu_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="小于"
+                                android:textColor="@color/red"
+                                android:textSize="33sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_disu_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="20滴"
+                                android:textSize="33sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_disu"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/tv_disu_text_group"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_name4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="2"
+                            android:singleLine="true"
+                            android:text="滴速"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/tv_item_fyh_type_4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="3"
+                            android:background="@drawable/rounded_editview"
+                            android:digits="1234567890."
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textSize="22sp" />
+
+                        <requestFocus />
+
+                        <TextView
+                            android:id="@+id/tv_item_fyh_shop_unit4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="滴/分"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/tv_sure_speed"
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/select_button_blue"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <!-- 观察 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_gc_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="2015—11—02"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_gc_patry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_gc_start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="2015—11—02"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+                    <GridView
+                        android:id="@+id/gv_look"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@id/tv_gc_patry"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
+                        android:cacheColorHint="@color/transparent"
+                        android:horizontalSpacing="6dp"
+                        android:listSelector="@color/transparent"
+                        android:numColumns="2"
+                        android:scrollbars="none"
+                        android:verticalSpacing="6dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_look_save"
+                android:layout_width="90dp"
+                android:layout_height="48dp"
+                android:text="@string/save"
+                android:layout_gravity="right"
+                android:background="@drawable/select_button_blue"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

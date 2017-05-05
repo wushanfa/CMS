@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp" >
+
+    <!-- administration -->
+
+    <RelativeLayout
+        android:id="@+id/rl_admin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_xuedaihao_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="途   径:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_xuedaihao_text"
+            android:padding="4dp"
+            android:text="xdh7855485"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- orderText -->
+
+    <RelativeLayout
+        android:id="@+id/rl_ordertext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_xuexing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="药   品:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ordertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_xuexing_text"
+            android:padding="4dp"
+            android:text="xdh7855485"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <!-- speed -->
+
+    <RelativeLayout
+        android:id="@+id/rl_speed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_speed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="滴   速:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_speed_text"
+            android:padding="4dp"
+            android:text="xdh7855485"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- planStartTime -->
+
+    <RelativeLayout
+        android:id="@+id/rl_planStartTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_planStartTime_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="开   始:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_planStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_planStartTime_text"
+            android:padding="4dp"
+            android:text="xdh7855485"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- injectionTool -->
+
+    <RelativeLayout
+        android:id="@+id/rl_injectionTool"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_injectionTool_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="器   械:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_injectionTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tv_injectionTool_text"
+            android:padding="4dp"
+            android:text="xdh7855485"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu_jzwkqk"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="左上肢"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_l_u_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_zsz_gj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_left_up_feel"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_zsz_gj"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_zsz_yd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运        动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_left_up_sport"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_zsz_yd"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_l_u_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_l_u_limb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_l_u_limb_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="左下肢"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_l_d_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_zxz_gj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_left_down_feel"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_zxz_gj"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_zxz_yd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运        动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_left_down_sport"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_zxz_yd"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_l_d_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_l_d_limb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_l_d_limb_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="右上肢"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_r_u_limb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_ysz_gj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_right_up_feel"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_ysz_gj"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_ysz_yd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运        动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_right_up_sport"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_ysz_yd"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_r_u_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_r_u_limb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_r_u_limb_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="右下肢"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_r_d_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_yxz_gj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_right_down_feel"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_yxz_gj"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_yxz_yd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运        动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_right_down_sport"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_yxz_yd"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_r_d_limb_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_r_d_limb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_r_d_limb_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/thumbnail_blank_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_skfl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="伤口敷料:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_spine_dressing"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_skfl"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_qtgj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="躯体感觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_spine_feel_other"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jzwk_qtgj"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_jzwk_qt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其        他:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_other"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@id/tv_jzwk_qt"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_blank_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_blank_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_blank_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <View
+        android:id="@+id/flag_select"
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:background="@color/org_blue_background"
+        android:visibility="invisible"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/flag_select"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/btn_check"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_check_off_holo_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_context"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ll_tar"
+        android:layout_toRightOf="@+id/ll_btn"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/yizhuliebiaolizitou"
+            android:textColor="@color/org_blue_background"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_order_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/yizhuliebiaolizi"
+            android:textColor="@color/black_text_content"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_dosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="right"
+        android:text="100ML"
+        android:textColor="@color/grey_text_content"
+        android:textSize="16sp" />
+
+</LinearLayout>

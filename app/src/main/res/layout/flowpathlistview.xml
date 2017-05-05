@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:weightSum="5"
+    android:orientation="horizontal" >
+   <RelativeLayout 
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="2"
+      
+       >
+       <LinearLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+           android:orientation="vertical"
+           >
+    <TextView 
+        
+    android:id="@+id/tv_flow_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textColor="@color/text_normal"
+    android:textSize="20sp"
+    android:text="8:00"
+    />
+     <TextView 
+    android:id="@+id/tv_flow_timedate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+       android:textColor="@color/text_normal"
+      android:layout_gravity="center_horizontal"
+    android:text="2015-2-10"
+    />
+     </LinearLayout>
+     <RelativeLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+     
+        
+           android:layout_alignParentRight="true"
+         >
+     <View 
+         android:id="@+id/q1"
+         android:layout_width="2px"
+         android:layout_height="73dp"
+          android:layout_centerHorizontal="true"
+         android:background="@color/timegreen"
+         />   
+         <ImageView 
+             android:id="@+id/q2"
+             android:layout_width="14dp"
+             android:layout_height="14dp"
+             android:layout_below="@id/q1"
+             android:layout_centerHorizontal="true"
+             android:src="@drawable/quan"/>
+          <View 
+              android:id="@+id/q3"
+              android:layout_below="@id/q2"
+         android:layout_width="2px"
+         android:layout_height="73dp"
+         android:layout_centerHorizontal="true"
+         android:background="@color/timegreen"
+         />   
+         <View 
+             android:layout_width="3px"
+             android:layout_height="3px"
+             android:background="@color/timegreen"
+            android:layout_centerInParent="true"
+             />
+         </RelativeLayout>
+   </RelativeLayout> 
+<TextView 
+    android:id="@+id/tv_flow_flowpath"
+    android:layout_width="0dp"
+    android:layout_weight="3"
+    android:layout_height="match_parent"
+    android:gravity="center"
+      android:textColor="@color/text_normal"
+      android:textSize="25sp"
+    android:text="扫描成功"
+    />
+</LinearLayout>

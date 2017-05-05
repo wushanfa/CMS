@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_icu"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_icu_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- time -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_50"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#1FBAF3">
+
+            <ImageButton
+                android:id="@+id/btn_date"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="7"
+                android:background="@drawable/threetest_date" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/et_date"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="38"
+            android:background="@drawable/ev_shape_no_rid_black"
+            android:gravity="center"
+            android:textColor="@color/blue_normal"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/ib_search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/threetest_sousuo"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/icu_vPager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

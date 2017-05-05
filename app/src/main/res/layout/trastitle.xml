@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="top"
+    android:padding="2dp" >
+
+    <ImageButton
+        android:id="@+id/imbtn_home"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/icon_home" 
+        android:contentDescription="@string/app_name"/>
+
+    <!-- 床号 & 姓名 -->
+
+    <LinearLayout
+        android:id="@+id/ll_pat_num_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imbtn_home"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/tv_tras_bed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_sugar_patient_bed_number_exp"
+            android:textColor="@color/black_text_title"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_tras_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_sugar_patient_name_exp"
+            android:textColor="@color/black_text_title"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imbtn_back"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/back"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

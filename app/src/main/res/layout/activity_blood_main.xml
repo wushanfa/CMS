@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_blood_main"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.gentlehealthcare.mobilecare.view.CheckedChangeRadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <RadioButton
+            android:id="@+id/rbtn_qian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/blood_tab"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="饭前"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_hou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/blood_tab"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="饭后"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_linshi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/blood_tab"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="临时"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </com.gentlehealthcare.mobilecare.view.CheckedChangeRadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/skin_blood" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_blood_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="血糖值"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_blood_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_blood_name"
+            android:layout_below="@+id/tv_blood_name"
+            android:text="mg/dl"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_bloodvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_blood_en"
+            android:layout_alignTop="@+id/tv_blood_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_blood_name"
+            android:phoneNumber="true" />
+
+        <RadioGroup
+            android:id="@+id/rg_blood_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_blood_en"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtn_blood_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/blood_tab_unselect"
+                android:button="@null"
+                android:padding="6dp"
+                android:text="HIGH"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_blood_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blood_tab_unselect"
+                android:button="@null"
+                android:padding="6dp"
+                android:text="LOW"
+                android:textSize="24sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

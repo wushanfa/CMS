@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_datepick_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:background="@color/command_blue"
+        android:gravity="left|center"
+        android:padding="4dp"
+        android:text="选择查询日期"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <DatePicker
+        android:id="@+id/dpPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:calendarViewShown="false" />
+
+    <Button
+        android:id="@+id/btn_date_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="确  定"
+        android:textSize="18sp"
+        android:textColor="@color/command_blue"/>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_orders"
+    tools:context="com.gentlehealthcare.mobilecare.activity.home.OrdersActivity" >
+
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_common_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"/>
+
+    <ListView
+        android:id="@+id/lv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

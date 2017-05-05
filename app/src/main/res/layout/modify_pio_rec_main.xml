@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/root_recpio"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_common_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginTop="8dp"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/elv_pio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_huliyuanyin"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="#3498db">
+
+                <Button
+                    android:id="@+id/btn_huliyuanyin"
+                    android:layout_width="180dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_color_btn_pio_add_stroke_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_huliyuanyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="right"
+                    android:text="护理问题"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/pio_shouxie_nursing_measure"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/pio_moren_nursing_measure"
+                    android:background="@drawable/select_btn_manual" />
+
+                <Button
+                    android:id="@+id/pio_moren_nursing_measure"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/select_btn_add" />
+
+                <ImageView
+                    android:id="@+id/iv_huliyuanyin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pio_had_choosen"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gentlehealthcare.mobilecare.view.NoScrollListView
+                android:id="@+id/elv_pio_problem"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/gray_dark"
+                android:dividerHeight="1dp"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hulizhiyin"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="#881FBAF3">
+
+                <Button
+                    android:id="@+id/btn_hulizhiyin"
+                    android:layout_width="180dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_color_btn_pio_add_stroke_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_hulizhiyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="right"
+                    android:text="护理致因"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/pio_shouxie_nursing_cast"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/pio_moren_nursing_cast"
+                    android:background="@drawable/select_btn_manual" />
+
+                <Button
+                    android:id="@+id/pio_moren_nursing_cast"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/select_btn_add" />
+
+                <ImageView
+                    android:id="@+id/iv_hulizhiyin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pio_not_choosen"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gentlehealthcare.mobilecare.view.NoScrollListView
+                android:id="@+id/elv_pio_causes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/gray_dark"
+                android:dividerHeight="1px"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hulifangfa"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="#881FBAF3">
+
+                <Button
+                    android:id="@+id/btn_hulifangfa"
+                    android:layout_width="180dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_color_btn_pio_add_stroke_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_hulifangfa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="right"
+                    android:text="护理目标"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/pio_shouxie_nursing_mubiao"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/pio_moren_nursing_mubiao"
+                    android:background="@drawable/select_btn_manual" />
+
+                <Button
+                    android:id="@+id/pio_moren_nursing_mubiao"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/select_btn_add" />
+
+                <ImageView
+                    android:id="@+id/iv_hulifangfa"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pio_not_choosen"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gentlehealthcare.mobilecare.view.NoScrollListView
+                android:id="@+id/elv_pio_target"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/gray_dark"
+                android:dividerHeight="1px"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hulicuoshi"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="#881FBAF3">
+
+                <Button
+                    android:id="@+id/btn_hulicuoshi"
+                    android:layout_width="180dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_color_btn_pio_add_stroke_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_hulicuoshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="right"
+                    android:text="护理措施"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/pio_shouxie_nursing_cuoshi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/pio_moren_nursing_cuoshi"
+                    android:background="@drawable/select_btn_manual" />
+
+                <Button
+                    android:id="@+id/pio_moren_nursing_cuoshi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/select_btn_add" />
+
+                <ImageView
+                    android:id="@+id/iv_hulicuoshi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/pio_not_choosen"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gentlehealthcare.mobilecare.view.NoScrollListView
+                android:id="@+id/elv_pio_measure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/gray_dark"
+                android:dividerHeight="1px"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/addttonLinear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/add_btn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/add_pio_button_bg"
+            android:src="@drawable/ic_action_new_add" />
+    </LinearLayout>
+
+</RelativeLayout>

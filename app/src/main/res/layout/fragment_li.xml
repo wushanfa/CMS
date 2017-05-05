@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_fra_li"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp">
+
+    <ListView
+        android:id="@+id/lv_completeMedicine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/frame_black"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+
+</LinearLayout>

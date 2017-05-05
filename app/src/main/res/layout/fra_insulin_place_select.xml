@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_place"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame_insulin_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_body"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/insulin_place_q" />
+
+    <TextView
+        android:id="@+id/tv_leftArm"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_body"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_rightArm"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_body"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_rightTopBelly"
+
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_body"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_leftTopBelly"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_body"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_rightBottomBelly"
+
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_body"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_leftBottomBelly"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_body"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_rightLeg"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_body"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_leftLeg"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_body"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/can_injection" />
+
+    <TextView
+        android:id="@+id/tv_rightButtock"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_body"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/can_injection"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_leftButtock"
+        style="@style/InsulinSiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_rightButtock"
+        android:layout_toLeftOf="@+id/tv_rightButtock"
+        android:background="@drawable/can_injection"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_around"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/around"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_400"
+        android:padding="10dp"
+        android:text="重配模版"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gentlehealthcare.mobilecare"
+    android:versionCode="1"
+    android:versionName="2.0.4">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".NurseApp"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboard"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.login.WelcomeAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 霍尼韦尔扫描 研华无需注册 -->
+        <receiver android:name=".activity.CameraDevicerReceiver">
+            <intent-filter>
+                <action android:name="com.honeywell.decode.intent.action.EDIT_DATA" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.login.CopyRightAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.LoginAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.HomeAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.patient.DeptPatientAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.work.WorkAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.patient.PatientAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.SystemAttentionAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.patient.medicine.FlowAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.patient.medicine.HelpAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".activity.patient.trans.TransfusionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.login.ChooseGroupAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" />
+        <activity
+            android:name=".activity.home.ThreeTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.home.DoctorOrdersAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.patient.insulin.InsulinFlowAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 扫描服务 -->
+        <service android:name=".activity.CamerService" />
+        <!-- 获取巡视服务 -->
+        <service android:name=".service.TipService" />
+        <!-- 友盟相关 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5785d77c67e58ebd1e0001e4">
+
+            <!-- 洛阳 562eea5267e58eb9c5000305 -->
+            <!-- 血研所 5785d77c67e58ebd1e0001e4 -->
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 友盟end -->
+        <activity
+            android:name=".activity.home.OrdersActivity"
+            android:label="@string/title_activity_orders"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.PIOActivity"
+            android:label="@string/title_activity_pio"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.PioShowActivity"
+            android:label="@string/title_activity_pio"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.ModifyPioRecActivity"
+            android:label="@string/title_activity_pio"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.PioRecordsActivity"
+            android:label="@string/title_activity_pio_records"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.AddPioRecActivity"
+            android:label="@string/title_activity_add_pio"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.RecordPioAppraisalAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".activity.home.PatientWorkAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- ICU正面 -->
+        <activity
+            android:name=".activity.home.ICUAActivity"
+            android:label="@string/title_activity_icu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 提示信息界面 -->
+        <activity
+            android:name=".activity.notification.Notification2Activity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="" />
+        <!-- ICU反面 -->
+        <activity
+            android:name=".activity.home.ICUBActivity"
+            android:label="@string/title_activity_icub"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 血糖测试 -->
+        <activity
+            android:name=".activity.bloodsugar.BloodSugarActivity"
+            android:label="@string/title_activity_blood_sugar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 通知过后身份扫描界面 -->
+        <activity
+            android:name=".activity.notification.StatusScanningAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 通知输血结束界面 -->
+        <activity
+            android:name=".activity.notification.BloodTransfusionEndAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 通知输血巡视界面 -->
+        <activity
+            android:name=".activity.notification.BloodTransfusionPatrolAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 通知静脉给药结束界面 -->
+        <activity
+            android:name=".activity.notification.IntravenouslyEndAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 通知静脉给药巡视界面 -->
+        <activity
+            android:name=".activity.notification.IntravenouslyPatrolAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 已完成输血列表界面 -->
+        <activity
+            android:name=".activity.patient.trans.TransfusionExcutedAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 静脉给药列表界面 -->
+        <activity
+            android:name=".intravenousnew.IntravOrdersListAct"
+            android:label="@string/title_activity_orders_list"
+            android:screenOrientation="portrait" />
+        <!-- 静脉给药巡视界面 -->
+        <activity
+            android:name=".intravenousnew.IntravPatrolAct"
+            android:screenOrientation="portrait" />
+        <!-- 静脉给药执行界面 -->
+        <activity
+            android:name=".intravenousnew.IntravExecuteAct"
+            android:screenOrientation="portrait" />
+        <!-- 静脉给药身份确认界面 -->
+        <activity
+            android:name=".intravenousnew.IntravIdentityCheckAct"
+            android:screenOrientation="portrait" />
+        <!-- 系统错误处理界面 -->
+        <activity
+            android:name=".activity.ErrorAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.orders.DocOrdersActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.implementation.ImplementationRecordAct"
+            android:screenOrientation="portrait" />
+        <!-- 执行核对界面 -->
+        <activity
+            android:name=".activity.orders.OrdersCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.insulin.InsulinActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 静脉给药界面 -->
+        <activity android:name=".activity.intravenous.IntravenousAct" />
+        <!-- 取消执行界面 -->
+        <activity android:name=".activity.cancelexecution.CancelExecutionAct" />
+        <!-- 消息提醒处理界面 -->
+        <activity
+            android:name=".activity.msg.MsgAct"
+            android:theme="@style/msganim"></activity>
+        <!-- 血品核收界面 -->
+        <activity
+            android:name=".activity.bloodbagnuclearcharge.BloodBagNuclearChargeAct"
+            android:screenOrientation="portrait"></activity>
+        <!-- 护理巡视界面 -->
+        <activity android:name="com.gentlehealthcare.mobilecare.activity.PatrolAct"></activity>
+        <!-- 护理巡视历史界面 -->
+        <activity
+            android:name=".activity.PatrolHistoryAct"
+            android:screenOrientation="portrait"></activity>
+        <!--体温单录入界面 -->
+        <activity
+            android:name=".activity.TemperatureAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"></activity>
+
+    </application>
+
+</manifest>

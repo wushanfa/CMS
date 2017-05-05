@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gentlehealthcare.mobilecare.view.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_home_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/select_btn_blue_gridview"
+        android:gravity="center"
+        android:lines="2"
+        android:text="医嘱查询"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <com.gentlehealthcare.mobilecare.view.SquareTextView
+        android:id="@+id/tv_home_sum"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/cricle_blue"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</com.gentlehealthcare.mobilecare.view.SquareLayout>

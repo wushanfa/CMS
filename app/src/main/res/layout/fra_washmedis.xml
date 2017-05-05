@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="560dp"
+    android:orientation="vertical"
+    android:id="@+id/root_fra_wash"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <!-- 头部标题信息 -->
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/trastitle" />
+
+    <!-- 冲管药品信息 -->
+
+    <LinearLayout
+        android:id="@+id/ll_chongguan"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/in_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_chongguan"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:padding="2dp"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</RelativeLayout>

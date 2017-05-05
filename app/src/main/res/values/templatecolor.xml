@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="temp_jinda">#ff3030</color>
+    <color name="temp_juda">#fa9299</color>
+    <color name="temp_zhusheguo">#b0b0b0</color>
+    <color name="temp_shangcida">#08b269</color>
+    <color name="temp_weida">#fcaed6</color>
+    <color name="temp_bencida">#252956</color>
+</resources>

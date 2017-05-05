@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_pat_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skin_white_gay"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="2床 赵洋洋"
+        android:textColor="@color/org_blue_background"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skin_white_gay"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:text="8:00 单采血小板\n(=0013456789)"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+</LinearLayout>

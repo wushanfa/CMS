@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_threeeightcheck"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    tools:context="com.gentlehealthcare.mobilecare.transfusion.ThreeEightCheckActivity">
+    <!-- title -->
+    <include
+        android:id="@+id/trans_select_title"
+        layout="@layout/trastitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/trans_xuepin_info"
+        android:layout_below="@id/trans_select_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <!-- date-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_xuepin_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="2015-11-16"
+                android:textColor="@color/black_text_title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_xuepin_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:text="15:59"
+                android:textColor="@color/black_text_title"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_background" />
+
+        <!-- medicine detail-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_xuepin_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="7"
+                android:lineSpacingMultiplier="1.3"
+                android:maxLines="3"
+                android:text="10%葡萄糖注射液[250ml/袋]，250ml红花[20ml*1支]"
+                android:textColor="@color/black_text_content"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xuepin_frequency"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Rh/阳性"
+                    android:textColor="@color/black_text_content"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_xuepin_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right"
+                    android:text="执行中"
+                    android:textColor="@color/green_600"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 3查 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_threecheck"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trans_xuepin_info"
+        android:layout_marginTop="4dp" >
+
+        <TextView
+            android:id="@+id/tv_three_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/black_text_content"
+            android:text="3查"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:id="@+id/btn_left_"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_three_check"
+            android:background="@color/black_text_content"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_three_check"
+            android:background="@color/black_text_content"
+            android:gravity="center" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_three_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_threecheck"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <Button
+            android:id="@+id/btn_xiaoqi"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:textColor="@color/black_text_content"
+            android:text="效期"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/btn_zhiliang"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/three_eight_transpant"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/btn_baozhuang"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/three_eight_transpant"
+            android:spinnerMode="dropdown" >
+        </Spinner>
+    </RelativeLayout>
+
+    <!-- 8对 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_eight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_three_tv">
+
+        <TextView
+            android:id="@+id/tv_eight_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/black_text_content"
+            android:text="8对"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_eight_check"
+            android:background="@color/black_text_content"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_eight_check"
+            android:background="@color/black_text_content"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <!-- 姓名 & 床号 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_name_bed"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_eight"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <Button
+            android:id="@+id/btn_name"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_bed"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="床号"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 病历号 & 血袋号 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_bingli_xuedai"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_name_bed"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <Button
+            android:id="@+id/btn_bingli"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="ID号"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_xuedai"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="血袋号"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!-- 血型 & 血品 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_xuexing_xuepin"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_bingli_xuedai"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <Button
+            android:id="@+id/btn_xuexing"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="血型"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_xuepin"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="血成分"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!-- 配血& 血量 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_peixue_xueliang"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_xuexing_xuepin"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <Spinner
+            android:id="@+id/btn_peixue"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/three_eight_transpant_long"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/btn_xueliang"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/surrod_gray_434343"
+            android:gravity="center"
+            android:text="血量"
+            android:textColor="@color/black_text_content"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_below="@id/rl_peixue_xueliang"
+        android:id="@+id/bt_tras_hd"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/select_button_blue"
+        android:text="核对"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

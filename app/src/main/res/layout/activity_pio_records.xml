@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activitygobackmain"
+    tools:context="com.gentlehealthcare.mobilecare.activity.home.PioRecordsActivity" >
+
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_pio_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_pio_records"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_command_toolbar"
+        android:layout_below="@+id/rl_titlebar"
+        android:layout_marginTop="5dp"
+        android:dividerPadding="8dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:padding="4dp"
+        android:smoothScrollbar="true" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:background="@drawable/cricle_red"
+        android:src="@drawable/ic_add_white_24dp"
+        android:visibility="gone" />
+
+</LinearLayout>

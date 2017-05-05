@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="调用医嘱"/>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手动"/>
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="提示选项"
+            android:visibility="gone"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/createEv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/select_bg_edittext"
+        android:hint="请输入..."
+        android:minHeight="180dp"
+        android:scrollbars="vertical"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/manually_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/grey_500"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/order_btn_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/select_choosen_order_btn_concer_zero"
+                android:text="确定"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/default_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray_dark"
+        android:dividerHeight="1px"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone">
+    </ListView>
+
+    <ListView
+        android:id="@+id/order_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="visible">
+    </ListView>
+
+</LinearLayout>

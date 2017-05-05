@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.gentlehealthcare.mobilecare.intravenousnew.IntravIdentityCheckAct">
+    <!-- title -->
+    <include
+        android:id="@+id/in_intravidentity_title"
+        layout="@layout/layout_title_intrav"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"></include>
+
+    <RelativeLayout
+        android:id="@+id/rl_patient_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_intravidentity_title"
+        android:background="@color/org_blue_background"
+        android:paddingBottom="@dimen/header_footer_top_bottom_padding">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/header_footer_left_right_padding"
+            android:background="@drawable/patient_portrait_male" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/header_footer_left_right_padding"
+            android:layout_toRightOf="@+id/iv_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/whitetextcolorandtwentysp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="孙百玲" />
+
+            <TextView
+                android:id="@+id/tv_patid"
+                style="@style/whitetextcolorandtsixteensp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病人ID:  74457" />
+
+            <TextView
+                android:id="@+id/tv_admission_times"
+                style="@style/whitetextcolorandtsixteensp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="住院次数:  第一次" />
+
+            <TextView
+                android:id="@+id/tv_bed_label"
+                style="@style/whitetextcolorandtsixteensp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="床        号:  23" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/whitetextcolorandtsixteensp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年        龄:  35" />
+
+            <TextView
+                android:id="@+id/tv_nursing_grades"
+                style="@style/whitetextcolorandtsixteensp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="护理等级:  二级护理" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_patient_info"
+        android:layout_marginTop="80dip"
+        android:gravity="center"
+        android:text="扫描患者腕带\n自动核对身份"
+        android:textColor="@color/red_800"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_manual_check"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/header_footer_top_bottom_padding"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/select_button_blue"
+        android:text="人工核对"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size" />
+
+</RelativeLayout>

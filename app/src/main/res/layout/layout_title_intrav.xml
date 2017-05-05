@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentTop="true"
+    android:background="@color/org_blue_background">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/select_btn_back" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="医嘱表单"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_width="55dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/home" />
+
+    </LinearLayout>
+
+</RelativeLayout>

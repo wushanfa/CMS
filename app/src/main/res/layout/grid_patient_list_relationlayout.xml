@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="500dp"
+              android:layout_centerInParent="true"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/start_dialog"
+        />
+
+    <GridView
+        android:id="@+id/gv_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@color/light_blue_50"
+        android:cacheColorHint="@color/transparent"
+        android:horizontalSpacing="15dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="20dp"
+        />
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/end_dialog"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>

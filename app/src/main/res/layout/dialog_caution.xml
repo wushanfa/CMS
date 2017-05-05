@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skin_blue"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/skin_about"
+        android:gravity="center|left"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="停止输血"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:text="已输"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size" />
+
+        <EditText
+            android:id="@+id/et_caution"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.6"
+            android:background="@drawable/rounded_editview"
+            android:gravity="center"
+            android:textColor="@color/text_normal"
+            android:digits="1234567890."
+            android:inputType="number"
+            android:textSize="20sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_message3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:text="ml"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_message4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="更换输血器和食盐水"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/skin_blue"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/select_skin_white_gray"
+        android:padding="8dp"
+        android:text="确定"
+        android:textColor="@drawable/select_color_text_blue_gray"
+        android:textSize="@dimen/text_size" />
+
+</LinearLayout>

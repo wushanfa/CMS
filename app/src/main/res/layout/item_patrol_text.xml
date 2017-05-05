@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp">
+
+
+    <TextView
+        android:id="@+id/tv_patrol_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="患者外出"
+        android:layout_centerVertical="true"
+        android:paddingLeft="38dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:maxLines="1"
+        android:paddingRight="10dp"
+        android:background="@drawable/nursing_patrol_no"
+        android:textColor="@color/black_text_title"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
+

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_icu_gskqk"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!-- ScrollView只需一个子类布局 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="骨 伤 科 情 况 (1)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/gushangkeqingkuang"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_skfl1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="伤口敷料:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_dressing"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_skfl1"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_gj1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_feel"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_gj1"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_dmbd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="动脉搏动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_artery"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_dmbd"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_msxx1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="末梢血循:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_peripheral"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_msxx1"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_yd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运       动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_exercise_orthopedics"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_yd1"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_qt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其       他:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_custom_orthopedics1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/tv_qt1"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_ll_gushangkeqingkuang"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:background="@color/blue_normal"
+                android:gravity="center"
+                android:text="骨 伤 科 情 况 (2)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/gushangkeqingkuang2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_skfl2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="伤口敷料:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_dressing2"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_skfl2"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_gj2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="感        觉:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_feel2"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_gj2"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_dmbd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="动脉搏动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_artery2"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_dmbd2"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_msxx2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="末梢血循:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_peripheral2"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_msxx2"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_yd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="运       动:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_exercise_orthopedics2"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_yd2"
+                        android:background="@drawable/bg_spinner_other"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_qt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其       他:"
+                        android:textColor="@color/threetesttext"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_custom_orthopedics2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/tv_qt2"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/skin_line_gray_sround" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_ll_gushangkeqingkuang2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/detail_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="点击折叠详细内容"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_iv2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/up" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_100_trans"
+        android:baselineAligned="false">
+
+
+        <TextView
+            android:id="@+id/page_time_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:text="记录时间："
+            android:textColor="@color/grey_600"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/page_time"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/page_time_message"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/skin_line_gray_sround"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/save_ll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/save_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_icu_save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save_img"
+                android:layout_centerHorizontal="true"
+                android:text="保存"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/select_choosen_order_btn_concer_zero" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

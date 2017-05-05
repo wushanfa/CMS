@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_fra_injection"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="部位"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_injectionsite"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:editable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_leastBloodTest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="最近一次血糖检测"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/black_text_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="计划执行时间:"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/et_planStartTime"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/activity_toolbar_btn_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="实际执行时间:"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/et_eventStartTime"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/activity_toolbar_btn_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="血糖值:"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/et_glucoseVal"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/activity_toolbar_btn_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="检测类型:"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/et_bloodvaluetype"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/activity_toolbar_btn_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

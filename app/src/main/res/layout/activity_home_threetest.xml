@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_threetest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/act_form_temperature_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/grey_100"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <!-- title -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/threetest_medical_records_title" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="500dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- time -->
+
+                <LinearLayout
+                    android:id="@+id/ll_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@color/blue_normal">
+
+                        <TextView
+                            android:id="@+id/btn_date"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="7"
+                            android:background="@drawable/threetest_date" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/et_date"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="38"
+                        android:background="@drawable/ev_shape_no_rid_black"
+                        android:gravity="center"
+                        android:textColor="@color/blue_normal"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/ib_search"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/threetest_sousuo"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="410dp"
+                    android:layout_gravity="center"
+                    android:flipInterval="30"
+                    android:paddingBottom="10dp"
+                    android:persistentDrawingCache="animation" />
+
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/blue_normal" />
+
+                <TextView
+                    android:id="@+id/page_number"
+                    android:layout_width="48dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/threetest_medical_records_page_first"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- tail -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/threetest_medical_records_tail" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_patients"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:minHeight="30dp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

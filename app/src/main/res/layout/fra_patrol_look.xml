@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_fra_patrol_look"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_medicine_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="354dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/frame_black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+        <!-- 观察-->
+        <RelativeLayout
+            android:id="@+id/rl_look"
+            android:layout_width="wrap_content"
+            android:layout_height="354dp"
+            android:visibility="visible">
+
+            <GridView
+                android:id="@+id/gv_look"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:cacheColorHint="@color/transparent"
+                android:horizontalSpacing="6dp"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="6dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_medicine_detail"
+        android:background="@color/grey_background"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_tras_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_button_blue"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

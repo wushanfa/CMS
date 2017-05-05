@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/current"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="465dp"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <!-- 体温 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="体            温:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/et_tiwen"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="℃"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+
+            android:background="@color/threetestline"/>
+
+        <!-- 心跳 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="心            率:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/et_xintiao"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="次/分"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline"
+            android:visibility="gone"/>
+        <!-- 呼吸 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="脉            搏:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/et_maibo"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="次/分"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline"/>
+        <!-- 脉搏 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="呼            吸:"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/et_huxi"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:text="次/分"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/threetestline"/>
+        <!-- 疼痛评分 -->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="疼 痛 评 分 :"
+                android:textColor="@color/threetesttext"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/et_pingfen"
+                android:layout_width="135dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:numeric="decimal"
+                android:textColor="@color/threetesttext"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/threetestline"/>
+
+        <!-- 血压 -->
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="215dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:layout_width="43dp"
+                    android:layout_height="35dp"
+                    android:gravity="bottom"
+                    android:text="收缩压"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="39dp"
+                    android:layout_height="35dp"
+                    android:text="(mmHg)"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    android:layout_width="43dp"
+                    android:layout_height="35dp"
+                    android:gravity="bottom"
+                    android:text="舒张压"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="39dp"
+                    android:layout_height="35dp"
+                    android:text="(mmHg)"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/threetestline"/>
+            <!-- 7点血压 -->
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="7  点  血  压:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashousuo7"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="/"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_xueyashuzhang7"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/threetestline"/>
+            <!-- 11点血压 -->
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="11 点  血  压:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashousuo11"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="/"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashuzhang11"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/threetestline"/>
+            <!-- 15点血压 -->
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="15 点  血  压:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashousuo15"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="/"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashuzhang15"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/threetestline"/>
+            <!-- 19点血压 -->
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="19 点  血  压:"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashousuo19"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="1dp"
+                    android:text="/"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="17sp"/>
+
+                <EditText
+                    android:id="@+id/et_xueyashuzhang19"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:numeric="decimal"
+                    android:textColor="@color/threetesttext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/threetestline"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="180dp"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+</ScrollView>
