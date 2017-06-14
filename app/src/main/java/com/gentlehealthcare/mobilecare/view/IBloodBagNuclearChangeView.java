@@ -11,12 +11,12 @@ import java.util.List;
 
 public interface IBloodBagNuclearChangeView {
 
-    public void setBloodBag(List<BloodProductBean2> params);
+     void setBloodBag(List<BloodProductBean2> params);
 
-    public void showToast(String msg);
+     void showToast(String msg);
     
-    public void loadBag() ;
+     void loadBag() ;
 
-    public void checkOrdersFailed() ;
+     void checkOrdersFailed() ;
 
 }

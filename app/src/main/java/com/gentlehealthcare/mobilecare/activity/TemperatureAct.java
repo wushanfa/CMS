@@ -1,979 +1,543 @@
 package com.gentlehealthcare.mobilecare.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
-import android.text.StaticLayout;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gentlehealthcare.mobilecare.R;
 import com.gentlehealthcare.mobilecare.UserInfo;
+import com.gentlehealthcare.mobilecare.adapter.CommonNavigatorAdapter;
+import com.gentlehealthcare.mobilecare.adapter.ExamplePagerAdapter;
+import com.gentlehealthcare.mobilecare.bean.sys.BarcodeDict;
+import com.gentlehealthcare.mobilecare.config.CommonNavigator;
+import com.gentlehealthcare.mobilecare.config.IPagerIndicator;
+import com.gentlehealthcare.mobilecare.config.MagicIndicator;
+import com.gentlehealthcare.mobilecare.config.UIUtil;
+import com.gentlehealthcare.mobilecare.config.ViewPagerHelper;
+import com.gentlehealthcare.mobilecare.constant.GlobalConstant;
+import com.gentlehealthcare.mobilecare.fragment.PhysicalSignInBasicFragment;
+import com.gentlehealthcare.mobilecare.fragment.PhysicalSignInOtherFragment;
 import com.gentlehealthcare.mobilecare.net.bean.SyncPatientBean;
 import com.gentlehealthcare.mobilecare.presenter.TemperaturePresenter;
+import com.gentlehealthcare.mobilecare.tool.DialogUtils;
+import com.gentlehealthcare.mobilecare.tool.LocalSave;
+import com.gentlehealthcare.mobilecare.tool.MacAddressUtils;
+import com.gentlehealthcare.mobilecare.tool.SharedPreferenceUtils;
 import com.gentlehealthcare.mobilecare.tool.StringTool;
+import com.gentlehealthcare.mobilecare.tool.TimeUtils;
+import com.gentlehealthcare.mobilecare.view.AlertDialogOneBtn;
+import com.gentlehealthcare.mobilecare.view.BadgePagerTitleView;
+import com.gentlehealthcare.mobilecare.view.ClipPagerTitleView;
+import com.gentlehealthcare.mobilecare.view.IPagerTitleView;
 import com.gentlehealthcare.mobilecare.view.ITemperatureView;
+import com.gentlehealthcare.mobilecare.view.LinePagerIndicator;
 import com.gentlehealthcare.mobilecare.view.MyPatientDialog;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+import com.gentlehealthcare.mobilecare.webService.WebServiceUtils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-
-import u.aly.br;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
- * Created by Zyy on 2016/12/7. 类说明：体温单录入
+ * 体温单录入
  */
+public class TemperatureAct extends BaseActivity implements ITemperatureView, View.OnClickListener {
+    private ProgressDialog mProgressDialog;
+    private Button btnBack;
+    private LinearLayout changePatient;
+    private ViewPager mViewPager;
+    private TemperaturePresenter TemperaturePresenter;
+    private FragmentManager mFragmentManager = null;
+    private List<Fragment> mFragments = new ArrayList<>();
+    private static final String[] CHANNELS = new String[]{"基础", "其他"};
+    private List<String> mDataList = Arrays.asList(CHANNELS);
+    private int whichPatients = 0;
+    private MyPatientDialog dialog;
+    private TextView patName;
+    private TextView patSex;
+    private TextView patBed;
+    private TextView patCode;
+    private String mPatID; //唯一流水号GUID
+    private String logTime, logStatus, twMethod, tw, twJw, twJwfs, mb, xl, hx, hxj,tt;  //基础信息
+    private String sg, tz, xy_1, xy_2, xy_3, xy_4, rl, cl, db_cs, nl, ywgm1,db_sj,db_rggm,nl_sj,yzr, othername1, othervalue1, othername2, othervalue2, xybhd, xt;  //其他信息
+    List<SyncPatientBean> deptPatient;
+    private String timePoint;
+    private Boolean isInit;   //是否是初始请求
+    private boolean isRefreshPatient;
 
-public class TemperatureAct extends BaseActivity implements ITemperatureView,
-		View.OnClickListener, View.OnFocusChangeListener {
-	@ViewInject(R.id.btn_back)
-	private Button btn_back;
-	@ViewInject(R.id.btn_menu)
-	private Button btn_menu;
-	@ViewInject(R.id.tv_pat_name)
-	private TextView tv_pat_name;
-	@ViewInject(R.id.sp_time)
-	private Spinner sp_time;
-	@ViewInject(R.id.sp_temperature_type)
-	private Spinner sp_temperature_type;
-	@ViewInject(R.id.cb_pulse)
-	private CheckBox cb_pulse;
-	@ViewInject(R.id.cb_pacemaker)
-	private CheckBox cb_pacemaker;
-	@ViewInject(R.id.cb_ventilator)
-	private CheckBox cb_ventilator;
-	@ViewInject(R.id.et_temperature)
-	private EditText et_temperature;
-	@ViewInject(R.id.et_bloodsugar)
-	private EditText et_bloodsugar;
-	@ViewInject(R.id.et_pulse)
-	private EditText et_pulse;
-	@ViewInject(R.id.et_heartrate)
-	private EditText et_heartrate;
-	@ViewInject(R.id.et_breathing)
-	private EditText et_breathing;
-	@ViewInject(R.id.et_systolicpressure)
-	private EditText et_systolicpressure;
-	@ViewInject(R.id.et_diastolicpressure)
-	private EditText et_diastolicpressure;
-	@ViewInject(R.id.et_pain)
-	private EditText et_pain;
-	@ViewInject(R.id.btn_top_1)
-	private Button btn_top_1;
-	@ViewInject(R.id.btn_top_2)
-	private Button btn_top_2;
-	@ViewInject(R.id.btn_top_3)
-	private Button btn_top_3;
-	@ViewInject(R.id.btn_top_4)
-	private Button btn_top_4;
-	@ViewInject(R.id.btn_top_5)
-	private Button btn_top_5;
-	@ViewInject(R.id.btn_top_6)
-	private Button btn_top_6;
-	@ViewInject(R.id.table_num)
-	private LinearLayout table_num;
-	@ViewInject(R.id.btn_1)
-	private Button btn_1;
-	@ViewInject(R.id.btn_2)
-	private Button btn_2;
-	@ViewInject(R.id.btn_3)
-	private Button btn_3;
-	@ViewInject(R.id.btn_4)
-	private Button btn_4;
-	@ViewInject(R.id.btn_5)
-	private Button btn_5;
-	@ViewInject(R.id.btn_6)
-	private Button btn_6;
-	@ViewInject(R.id.btn_7)
-	private Button btn_7;
-	@ViewInject(R.id.btn_8)
-	private Button btn_8;
-	@ViewInject(R.id.btn_9)
-	private Button btn_9;
-	@ViewInject(R.id.btn_0)
-	private Button btn_0;
-	@ViewInject(R.id.btn_poit)
-	private Button btn_poit;
-	@ViewInject(R.id.btn_delete)
-	private ImageButton btn_delete;
-	@ViewInject(R.id.btn_finished)
-	private Button btn_finished;
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            dismissProgressDialog();
+            switch (msg.what) {
+                case 0:
+                    initFragment(logTime, logStatus, twMethod, tw, twJw, twJwfs, mb, xl, hx, hxj ,tt,
+                            sg, tz, xy_1, xy_2, xy_3, xy_4, rl, cl, db_cs, nl, ywgm1,db_sj,db_rggm,nl_sj,yzr,othername1,
+                            othervalue1, othername2, othervalue2, xybhd, xt);
+                    break;
+                case 1:
+                    sendMessageToFragment();
+                    sendInformationToFragment();
+                    break;
+                case -1:
+                    Toast.makeText(TemperatureAct.this, "网络异常", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+    };
 
-	private ProgressDialog progressDialog;
-	private TemperaturePresenter temperaturePresenter;
-	private int keyType = 0;
-	private static StringBuffer sbTemperature;
-	private static StringBuffer sbPulse;
-	private static StringBuffer sbBreathing;
-	private static StringBuffer sbSystolicpressure;
-	private static StringBuffer sbDiastolicpressure;
-	private static StringBuffer sbHeartRate;
-	private MyPatientDialog dialog;
-	private int whichPatients = 0;
-	private SyncPatientBean currentPatient;
-	private static int timeFlag = 0;
-	private static int temperatureTypeFlag = 0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.act_template);
+        initView();
+    }
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.act_template);
-		ViewUtils.inject(this);
-		temperaturePresenter = new TemperaturePresenter(this);
-		temperaturePresenter.initialSrc();
-		sbTemperature = new StringBuffer();
-		sbPulse = new StringBuffer();
-		sbBreathing = new StringBuffer();
-		sbSystolicpressure = new StringBuffer();
-		sbDiastolicpressure = new StringBuffer();
-		sbHeartRate=new StringBuffer();
-		temperaturePresenter.getPatients(this, whichPatients);
-	}
+    //初始化控件
+    private void initView() {
+        deptPatient = new ArrayList<>();
+        btnBack = (Button) findViewById(R.id.btn_back);
+        changePatient = (LinearLayout) findViewById(R.id.ll_pat_name);
+        patName = (TextView) findViewById(R.id.tv_pat_name);
+        patSex = (TextView) findViewById(R.id.tv_pat_sex);
+        patBed = (TextView) findViewById(R.id.tv_pat_bed);
+        patCode = (TextView) findViewById(R.id.tv_pat_code);
+        mViewPager = (ViewPager) findViewById(R.id.act_template_view_pager);
+        TemperaturePresenter = new TemperaturePresenter(this);
+        TemperaturePresenter.initialSrc();
+        TemperaturePresenter.getPatients(this, whichPatients);
+    }
 
-	@Override
-	protected void resetLayout() {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        btnBack.setOnClickListener(this);
+        changePatient.setOnClickListener(this);
+    }
 
-	}
+    //初始化fragment
+    private void initFragment(String logTime, String logStatus, String twMethod, String tw,
+                              String twJw, String twJwfs, String mb, String xl, String hx, String hxj,String tt,
+                              String sg, String tz, String xy_1, String xy_2, String xy_3, String xy_4, String rl,
+                              String cl, String db_cs, String nl, String ywgm1,String db_sj,String db_rggm,String nl_sj,String yzr, String othername1, String othervalue1,
+                              String othername2, String othervalue2, String xybhd, String xt) {
+        if (mFragmentManager == null)
+            mFragmentManager = getSupportFragmentManager();
 
-	@Override
-	public void showProgressDialog(String msg) {
-		if (progressDialog == null) {
-			progressDialog = new ProgressDialog(this);
-		}
-		progressDialog.setMessage(msg);
-		progressDialog.show();
-	}
+        PhysicalSignInBasicFragment mPhysicalSignInBasicFragment = (PhysicalSignInBasicFragment)
+                mFragmentManager.findFragmentByTag("PhysicalSignInBasicFragment");
+        if (mPhysicalSignInBasicFragment == null) {
+            mPhysicalSignInBasicFragment = PhysicalSignInBasicFragment.newInstance();
+            Bundle bundle = new Bundle();
+            bundle.putString("PAT_ID", mPatID);
+            bundle.putString("logTime", timePoint.substring(11,16));
+            bundle.putString("logStatus", logStatus);
+            bundle.putString("twMethod", twMethod);
+            bundle.putString("tw", tw);
+            bundle.putString("twJw", twJw);
+            bundle.putString("twJwfs", twJwfs);
+            bundle.putString("mb", mb);
+            bundle.putString("xl", xl);
+            bundle.putString("hx", hx);
+            bundle.putString("hxj", hxj);
+            bundle.putString("tt", tt);
+            if (mPhysicalSignInBasicFragment.isAdded()) {
+                return;
+            }
+            mPhysicalSignInBasicFragment.setArguments(bundle);
+            mFragments.add(mPhysicalSignInBasicFragment);
+        }
 
-	@Override
-	public void dismissProgressDialog() {
-		if (progressDialog != null && progressDialog.isShowing()) {
-			progressDialog.dismiss();
-		}
-	}
+        PhysicalSignInOtherFragment mPhysicalSignInOtherFragment = (PhysicalSignInOtherFragment)
+                mFragmentManager.findFragmentByTag("PhysicalSignInOtherFragment");
+        if (mPhysicalSignInOtherFragment == null) {
+            mPhysicalSignInOtherFragment = PhysicalSignInOtherFragment.newInstance();
+            Bundle bundle = new Bundle();
+            bundle.putString("PAT_ID", mPatID);
+            bundle.putString("sg", sg);
+            bundle.putString("tz", tz);
+            bundle.putString("xy_1", xy_1);
+            bundle.putString("xy_2", xy_2);
+            bundle.putString("xy_3", xy_3);
+            bundle.putString("xy_4", xy_4);
+            bundle.putString("rl", rl);
+            bundle.putString("cl", cl);
+            bundle.putString("db_cs", db_cs);
+            bundle.putString("nl", nl);
+            bundle.putString("ywgm1", ywgm1);
+            bundle.putString("db_sj", db_sj);
+            bundle.putString("db_rggm", db_rggm);
+            bundle.putString("nl_sj", nl_sj);
+            bundle.putString("yzr", yzr);
+            bundle.putString("othername1", othername1);
+            bundle.putString("othervalue1", othervalue1);
+            bundle.putString("othername2", othername2);
+            bundle.putString("othervalue2", othervalue2);
+            bundle.putString("xybhd", xybhd);
+            bundle.putString("xt", xt);
+            if (mPhysicalSignInOtherFragment.isAdded()) {
+                return;
+            }
+            mPhysicalSignInOtherFragment.setArguments(bundle);
+            mFragments.add(mPhysicalSignInOtherFragment);
+        }
 
-	@Override
-	public void showToast(String str) {
-		ShowToast(str);
-	}
+        ExamplePagerAdapter mExamplePagerAdapter = new ExamplePagerAdapter(mFragmentManager, mFragments, mDataList);
+        mViewPager.setAdapter(mExamplePagerAdapter);
+        initMagicIndicator3();
+    }
 
-	@Override
-	public void initialSrc() {
-		btn_back.setOnClickListener(this);
-		btn_menu.setOnClickListener(this);
-		et_temperature.setOnFocusChangeListener(this);
-		tv_pat_name.setOnClickListener(this);
-		et_pulse.setOnFocusChangeListener(this);
-		et_breathing.setOnFocusChangeListener(this);
-		et_systolicpressure.setOnFocusChangeListener(this);
-		et_diastolicpressure.setOnFocusChangeListener(this);
-		et_heartrate.setOnFocusChangeListener(this);
-		btn_top_1.setOnClickListener(this);
-		btn_top_2.setOnClickListener(this);
-		btn_top_3.setOnClickListener(this);
-		btn_top_4.setOnClickListener(this);
-		btn_top_5.setOnClickListener(this);
-		btn_top_6.setOnClickListener(this);
-		btn_1.setOnClickListener(this);
-		btn_2.setOnClickListener(this);
-		btn_3.setOnClickListener(this);
-		btn_4.setOnClickListener(this);
-		btn_5.setOnClickListener(this);
-		btn_6.setOnClickListener(this);
-		btn_7.setOnClickListener(this);
-		btn_8.setOnClickListener(this);
-		btn_9.setOnClickListener(this);
-		btn_0.setOnClickListener(this);
-		btn_poit.setOnClickListener(this);
-		btn_delete.setOnClickListener(this);
-		btn_finished.setOnClickListener(this);
-		List<String> time = new ArrayList<String>();
-		time.add("6:00");
-		time.add("10:00");
-		time.add("14:00");
-		time.add("18:00");
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, time);
-		arrayAdapter
-				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-		sp_time.setAdapter(arrayAdapter);
-		sp_time.setOnItemSelectedListener(new SpinerTimeOnItemListener());
+    private void initMagicIndicator3() {
+        MagicIndicator magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator3);
+        magicIndicator.setBackgroundResource(R.drawable.round_indicator_bg);
+        CommonNavigator commonNavigator = new CommonNavigator(this);
+        commonNavigator.setAdapter(new CommonNavigatorAdapter() {
 
-		List<String> temperature = new ArrayList<String>();
-		temperature.add("腋温");
-		temperature.add("口温");
-		temperature.add("肛温");
-		ArrayAdapter<String> arrayAdapterTemp = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, temperature);
-		arrayAdapterTemp
-				.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-		sp_temperature_type.setAdapter(arrayAdapterTemp);
-		sp_temperature_type
-				.setOnItemSelectedListener(new SpinerTemperatureOnItemListener());
+            @Override
+            public int getCount() {
+                return mDataList == null ? 0 : mDataList.size();
+            }
 
-		cb_pacemaker
-				.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-					@Override
-					public void onCheckedChanged(CompoundButton buttonView,
-							boolean isChecked) {
-						if (isChecked) {
-							et_heartrate.setText("");
-						}
-					}
-				});
+            @Override
+            public IPagerTitleView getTitleView(Context context, final int index) {
+                BadgePagerTitleView badgePagerTitleView = new BadgePagerTitleView(context);
+                ClipPagerTitleView clipPagerTitleView = new ClipPagerTitleView(context);
+                clipPagerTitleView.setText(mDataList.get(index));
+                clipPagerTitleView.setTextColor(Color.parseColor("#1FBAF3"));
+                clipPagerTitleView.setClipColor(Color.WHITE);
+                clipPagerTitleView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mViewPager.setCurrentItem(index);
+                    }
+                });
+                badgePagerTitleView.setInnerPagerTitleView(clipPagerTitleView);
+                return badgePagerTitleView;
+            }
 
-		cb_pulse.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				if (isChecked) {
-					et_pulse.setText("");
-				}
-			}
-		});
-		cb_ventilator
-				.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-					@Override
-					public void onCheckedChanged(CompoundButton buttonView,
-							boolean isChecked) {
-						if (isChecked) {
-							et_breathing.setText("");
-						}
-					}
-				});
-		HidnKey(et_temperature);
-		HidnKey(et_pulse);
-		HidnKey(et_heartrate);
-		HidnKey(et_breathing);
-		HidnKey(et_systolicpressure);
-		HidnKey(et_diastolicpressure);
-	}
+            @Override
+            public IPagerIndicator getIndicator(Context context) {
+                LinePagerIndicator indicator = new LinePagerIndicator(context);
+                float navigatorHeight = context.getResources().getDimension(R.dimen.common_navigator_height);
+                float borderWidth = UIUtil.dip2px(context, 1);
+                float lineHeight = navigatorHeight - 2 * borderWidth;
+                indicator.setLineHeight(lineHeight);
+                indicator.setRoundRadius(lineHeight / 2);
+                indicator.setYOffset(borderWidth);
+                indicator.setColors(Color.parseColor("#1FBAF3"));
+                return indicator;
+            }
+        });
+        magicIndicator.setNavigator(commonNavigator);
+        ViewPagerHelper.bind(magicIndicator, mViewPager);
+    }
 
-	@Override
-	public void showKey(String[] strs, int flag) {
-		table_num.setVisibility(View.VISIBLE);
-		switch (flag) {
-		case 1:
-			keyType = 1;
-			setKeyNum(strs);
-			break;
-		case 2:
-			keyType = 2;
-			setKeyNum(strs);
-			break;
-		case 3:
-			keyType = 3;
-			setKeyNum(strs);
-			break;
-		case 4:
-			keyType = 4;
-			setKeyNum(strs);
-			break;
-		case 5:
-			keyType = 5;
-			setKeyNum(strs);
-			break;
-		case 6:
-			keyType = 6;
-			setKeyNum(strs);
-			break;
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_back:
+                finish();
+                break;
+            case R.id.ll_pat_name:
+                //病人切换
+                TemperaturePresenter.showPatients();
+                break;
+            default:
+                break;
+        }
+    }
 
-		}
-	}
+    @Override
+    public void showProgressDialog(String msg) {
 
-	@Override
-	public void setPatientInfo(SyncPatientBean patientInfo) {
-		tv_pat_name.setText(patientInfo.getName() +" "+ StringTool.isBedNumber(patientInfo.getBedLabel())+" "+patientInfo.getPatCode());
-		currentPatient = patientInfo;
-	}
+    }
 
-	private void setKeyNum(String[] strs) {
-		btn_top_1.setText(strs[0]);
-		btn_top_2.setText(strs[1]);
-		btn_top_3.setText(strs[2]);
-		btn_top_4.setText(strs[3]);
-		btn_top_5.setText(strs[4]);
-		btn_top_6.setText(strs[5]);
-	}
+    public void dismissProgressDialog() {
+        if (mProgressDialog != null) {
+            mProgressDialog.dismiss();
+            mProgressDialog = null;
+        }
+    }
 
-	@Override
-	public void showPatients(final List<SyncPatientBean> deptPatient) {
-		dialog = new MyPatientDialog(TemperatureAct.this,
-				new MyPatientDialog.MySnListener() {
+    public void showToast(String str) {
+        ShowToast(str);
+    }
 
-					@Override
-					public void myOnItemClick(View view, int position, long id) {
-						temperaturePresenter.setPatientInfo(deptPatient
-								.get(position));
-						whichPatients = position;
-						dialog.dismiss();
-					}
+    @Override
+    public void initialSrc() {
 
-					@Override
-					public void onRefresh() {
-						// isRefreshPatient = true;
-						temperaturePresenter.getPatients(TemperatureAct.this,
-								1024);// 1000标记用来刷新
-						dialog.dismiss();
-					}
-				}, whichPatients, deptPatient);
-		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		dialog.show();
-	}
+    }
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.tv_pat_name:
-			temperaturePresenter.showPatients();
-			break;
-		case R.id.btn_back:
-			finish();
-			break;
-		case R.id.btn_menu:
-			String bloodPressure = et_systolicpressure.getText() + "/"
-					+ et_diastolicpressure.getText();
-			temperaturePresenter.saveTemperature(currentPatient.getPatId(),currentPatient.getPatCode(),currentPatient.getVisitId(),String.valueOf(timeFlag),
-					et_temperature.getText().toString(), String
-							.valueOf(temperatureTypeFlag), et_pulse.getText()
-							.toString(), et_heartrate.getText().toString(),
-					et_breathing.getText().toString(), bloodPressure,
-					et_bloodsugar.getText().toString(), et_pain.getText()
-							.toString());
-			break;
-		case R.id.btn_top_1:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_1.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_1.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_1.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_1.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_1.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_1.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_top_2:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_2.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_2.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_2.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_2.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_2.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_2.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_top_3:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_3.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_3.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_3.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_3.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_3.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_3.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_top_4:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_4.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_4.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_4.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_4.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_4.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_4.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_top_5:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_5.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_5.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_5.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_5.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_5.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_5.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_top_6:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(btn_top_6.getText());
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(btn_top_6.getText());
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(btn_top_6.getText());
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(btn_top_6.getText());
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(btn_top_6.getText());
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(btn_top_6.getText());
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_1:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("1");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("1");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("1");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("1");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("1");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("1");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_2:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("2");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("2");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("2");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("2");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("2");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(2);
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_3:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("3");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("3");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("3");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("3");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("3");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(3);
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_4:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("4");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("4");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("4");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("4");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("4");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(4);
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_5:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("5");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("5");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("5");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("5");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("5");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(5);
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_6:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("6");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("6");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("6");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("6");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("6");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("6");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_7:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("7");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("7");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("7");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("7");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("7");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("7");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_8:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("8");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("8");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("8");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("8");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("8");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("8");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_9:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("9");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("9");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("9");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("9");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("9");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("9");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_0:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append("0");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append("0");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append("0");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append("0");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append("0");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append("0");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_poit:
-			switch (keyType) {
-			case 1:
-				sbTemperature.append(".");
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				sbPulse.append(".");
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				sbBreathing.append(".");
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				sbSystolicpressure.append(".");
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				sbDiastolicpressure.append(".");
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				sbHeartRate.append(".");
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_delete:
-			switch (keyType) {
-			case 1:
-				String temp = StringTool.delateLastChar(sbTemperature);
-				sbTemperature.delete(0, sbTemperature.length());
-				sbTemperature.append(temp);
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				String pulse = StringTool.delateLastChar(sbPulse);
-				sbPulse.delete(0, sbPulse.length());
-				sbPulse.append(pulse);
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				String breathing = StringTool.delateLastChar(sbBreathing);
-				sbBreathing.delete(0, sbBreathing.length());
-				sbBreathing.append(breathing);
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				String systolicpressure = StringTool
-						.delateLastChar(sbSystolicpressure);
-				sbSystolicpressure.delete(0, sbSystolicpressure.length());
-				sbSystolicpressure.append(systolicpressure);
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				String diastolicpressure = StringTool
-						.delateLastChar(sbDiastolicpressure);
-				sbDiastolicpressure.delete(0, sbDiastolicpressure.length());
-				sbDiastolicpressure.append(diastolicpressure);
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				String heartRate = StringTool.delateLastChar(sbHeartRate);
-				sbHeartRate.delete(0, heartRate.length());
-				sbHeartRate.append(heartRate);
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
-		case R.id.btn_finished:
-			table_num.setVisibility(View.INVISIBLE);
-			switch (keyType) {
-			case 1:
-				et_temperature.setText(sbTemperature.toString());
-				break;
-			case 2:
-				et_pulse.setText(sbPulse.toString());
-				break;
-			case 3:
-				et_breathing.setText(sbBreathing.toString());
-				break;
-			case 4:
-				et_systolicpressure.setText(sbSystolicpressure.toString());
-				break;
-			case 5:
-				et_diastolicpressure.setText(sbDiastolicpressure.toString());
-				break;
-			case 6:
-				et_heartrate.setText(sbHeartRate.toString());
-				break;
-			}
-			break;
+    @Override
+    public void showKey(String[] strs, int flag) {
 
-		}
+    }
 
-	}
+    @Override
+    public void setPatientInfo(SyncPatientBean patientInfo) {
+        patName.setText(patientInfo.getName());
+        patSex.setText(patientInfo.getSex());
+        patBed.setText(StringTool.isBedNumber(patientInfo.getBedLabel()));
+        patCode.setText(patientInfo.getPatCode());
+        mPatID = patientInfo.getPatId();
+        isInit = true;
+        initData(isInit);
+    }
 
-	class SpinerTimeOnItemListener implements OnItemSelectedListener {
+    @Override
+    public void setPatient(List<SyncPatientBean> list) {
+        deptPatient.clear();
+        deptPatient.addAll(list);
+        if (isRefreshPatient) {
+            isRefreshPatient = false;
+            showPatients();
+        }
+    }
 
-		@Override
-		public void onItemSelected(AdapterView<?> parent, View view,
-				int position, long id) {
-			// TODO Auto-generated method stub
-			timeFlag = position;
-		}
+    //初始化数据
+    private void initData(final Boolean isInit) {
+        mProgressDialog = DialogUtils.createSimpleProgressDialog(this, "正在加载数据...");
+        final HashMap<String, String> map = new HashMap<>() ;
+        map.put("action","V0001");
+        JSONObject message = new JSONObject();
+        try {
+            message.put("SourceSystem", "移动护理");
+            message.put("SourceID", MacAddressUtils.getMacAddress(this));
+            message.put("MessageID", "");
+            message.put("UserCode", UserInfo.getUserName());
+            message.put("UserName", UserInfo.getName());
+            message.put("PAT_ID", mPatID);
+            timePoint = SharedPreferenceUtils.getTimePoint(TemperatureAct.this);
+            if (timePoint != null || !"null".equals(timePoint) || !"".equals(timePoint)) {
+                timePoint = SharedPreferenceUtils.getTimePoint(TemperatureAct.this);
+            }else{
+                timePoint=TimeUtils.getCurrentTime().concat(" 02:00:00");
+            }
+			message.put("RECORDING_TIME", timePoint);
+            message.put("AccessToken", "");
+            map.put("message", message.toString());
 
-		@Override
-		public void onNothingSelected(AdapterView<?> parent) {
-			// TODO Auto-generated method stub
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String result = WebServiceUtils.callWebService(map);
+                    if (!TextUtils.isEmpty(result)) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(result);
+                            String resultContent = jsonObject.optString("ResultContent");
+                            if ("Success".equals(resultContent)) {
+                                JSONArray successIDList = jsonObject.getJSONArray("SuccessIDList");
+                                JSONObject object = successIDList.getJSONObject(0);
+                                /**基础信息**/
+                                logTime = object.optString("LOG_TIME");  //记录时间
+                                logStatus = object.optString("LOG_STATUS"); //记录状态
+                                twMethod = object.optString("TW_METHOD");  //体温测量方式
+                                tw = object.optString("TW");  //体温
+                                twJw = object.optString("TW_JW");  //降温后体温
+                                twJwfs = object.optString("TW_JWFS");//降温方式
+                                mb = object.optString("MB");//脉搏
+                                xl = object.optString("XL"); //心率
+                                hx = object.optString("HX");//呼吸
+                                hxj = object.optString("HX_HXJ"); //呼吸机
+                                tt = object.optString("TT");//疼痛
+                                /**其他信息**/
+                                sg = object.optString("SG"); //身高
+                                tz = object.optString("TZ");//体重
+                                xy_1 = object.optString("XY_1");//上午血压1
+                                xy_2 = object.optString("XY_2"); //上午血压2
+                                xy_3 = object.optString("XY_3");//下午血压1
+                                xy_4 = object.optString("XY_4"); //下午血压2
+                                rl = object.optString("RL"); //入量
+                                cl = object.optString("CL"); //出量
+                                db_cs = object.optString("DB_CS");  //大便次数
+                                nl = object.optString("NL");  //尿量
+                                ywgm1 = object.optString("YWGM1");//药物过敏
+                                db_sj = object.optString("DB_SJ");   //大便失禁
+                                db_rggm = object.optString("DB_RGGM");  //人工肛门
+                                nl_sj = object.optString("NL_SJ");  //小便失禁
+                                yzr = object.optString("YZR");  //移植日
+                                othername1 = object.optString("OTHERNAME1");  //自定义项目1
+                                othervalue1 = object.optString("OTHERVALUE1"); //自定义对应值1
+                                othername2 = object.optString("OTHERNAME2"); //自定义项目2
+                                othervalue2 = object.optString("OTHERVALUE2"); //自定义对应值2
+                                xybhd = object.optString("XYBHD"); //血氧饱和度
+                                xt = object.optString("XT"); //血糖
+                                if(isInit){
+                                    mHandler.sendEmptyMessage(0);
+                                }else{
+                                    mHandler.sendEmptyMessage(1);
+                                }
+                            } else {
+                                mHandler.sendEmptyMessage(-1);
+                            }
 
-		}
-	}
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        mHandler.sendEmptyMessage(-1);
+                    }
+                }
+            }).start();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 
-	class SpinerTemperatureOnItemListener implements OnItemSelectedListener {
+    @Override
+    protected void resetLayout() {
+    }
 
-		@Override
-		public void onItemSelected(AdapterView<?> parent, View view,
-				int position, long id) {
-			// TODO Auto-generated method stub
-			temperatureTypeFlag = position;
-		}
+    private boolean patternCode(String patternStr, String matcherStr) {
+        Pattern p = Pattern.compile(patternStr.trim());
+        Matcher m = p.matcher(matcherStr.trim());
+        boolean b = m.matches();
+        return b;
+    }
 
-		@Override
-		public void onNothingSelected(AdapterView<?> parent) {
-			// TODO Auto-generated method stub
-			temperatureTypeFlag = 0;
-		}
-	}
+    public void showExceptionDialog(String title, String msg) {
+        final AlertDialogOneBtn alertDialogOneBtn = new AlertDialogOneBtn(this);
+        alertDialogOneBtn.setButton(getResources().getString(R.string.make_sure));
+        alertDialogOneBtn.setTitle(title);
+        alertDialogOneBtn.setMessage(msg);
+        alertDialogOneBtn.show();
+        alertDialogOneBtn.setButtonListener(true, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialogOneBtn.dismiss();
+            }
+        });
+    }
 
-	@Override
-	public void onFocusChange(View v, boolean hasFocus) {
-		// TODO Auto-generated method stub
-		switch (v.getId()) {
-		case R.id.et_temperature:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "35.", "36.",
-						"37.", "38.", "39.", "40." }, 1);
-			}
-			break;
-		case R.id.et_pulse:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "6", "7", "8", "9",
-						"10", "11" }, 2);
-			}
-			break;
-		case R.id.et_breathing:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "15", "19", "20",
-						"21", "22", "30" }, 3);
-			}
-			break;
-		case R.id.et_systolicpressure:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "10", "90", "100",
-						"110", "120", "130" }, 4);
-			}
-			break;
-		case R.id.et_diastolicpressure:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "10", "90", "100",
-						"110", "120", "130" }, 5);
-			}
-			break;
-		case R.id.et_heartrate:
-			if (hasFocus) {
-				temperaturePresenter.showKey(new String[] { "60", "70", "80",
-						"90", "100", "110" }, 6);
-			}
-			break;
-		default:
-			break;
-		}
-	};
+    @Override
+    public void showPatients() {
+        dialog = new MyPatientDialog(TemperatureAct.this, new MyPatientDialog.MySnListener() {
+
+            @Override
+            public void myOnItemClick(View view, int position, long id) {
+                TemperaturePresenter.setPatientInfo(deptPatient.get(position));
+                whichPatients = position;
+                Intent intent = new Intent();
+                intent.putExtra("PAT_ID",deptPatient.get(position).getPatId());
+                intent.setAction("com.herench.onItemClick");
+                sendBroadcast(intent);
+                //TODO:切换病人信息
+//                isInit = false;
+//                initData(isInit);
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onRefresh() {
+                isRefreshPatient = true;
+                TemperaturePresenter.getPatients(TemperatureAct.this, 1024);// 1000标记用来刷新
+                dialog.dismiss();
+            }
+        }, whichPatients, deptPatient);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.show();
+    }
+
+    //扫描腕带
+    public void DoCameraResult(String result) {
+		List<BarcodeDict> barcodeDicts = LocalSave.getDataList(getApplicationContext(), GlobalConstant.KEY_BARCODE);
+        String barcodeName = "";
+        for (int i = 0; i < barcodeDicts.size(); i++) {
+            if (patternCode(barcodeDicts.get(i).getRegularExp(), result)) {
+                barcodeName = barcodeDicts.get(i).getBarcodeName();
+                break;
+            }
+        }
+        if (barcodeName.equals("PAT_BARCODE")) {
+            boolean flag = true;
+            for (int i = 0; i < deptPatient.size(); i++) {
+                if (result.equals(deptPatient.get(i).getPatBarcode())) {
+                    GlobalConstant.PATID = deptPatient.get(i).getPatId();
+                    TemperaturePresenter.setPatients(deptPatient.get(i));
+                    //切换病人 435951*3*
+                    mPatID = result.replace("*", "_").substring(0,result.length()-1);
+                    //TODO:切换病人信息
+//                    isInit = false;
+//                    initData(isInit);
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                showExceptionDialog(getResources().getString(R.string.scan_excetion),
+                        getResources().getString(R.string.scan_patient_no));
+            }
+        }
+    }
+
+    //将扫描到的基础信息传递到fragment中
+    private void sendMessageToFragment() {
+        Intent intent = new Intent();
+        intent.putExtra("PAT_ID", mPatID);
+        intent.putExtra("logTime", timePoint);
+        intent.putExtra("logStatus", logStatus);
+        intent.putExtra("twMethod", twMethod);
+        intent.putExtra("tw", tw);
+        intent.putExtra("twJw", twJw);
+        intent.putExtra("twJwfs", twJwfs);
+        intent.putExtra("mb", mb);
+        intent.putExtra("xl", xl);
+        intent.putExtra("hx", hx);
+        intent.putExtra("hxj", hxj);
+        intent.putExtra("tt", tt);
+        intent.setAction("com.herench.change.person");
+        sendBroadcast(intent);
+    }
+
+    //将扫描到的其他信息传递到fragment中
+    private void sendInformationToFragment(){
+        Intent intent = new Intent();
+        intent.putExtra("PAT_ID", mPatID);
+        intent.putExtra("sg", sg);
+        intent.putExtra("tz", tz);
+        intent.putExtra("xy_1", xy_1);
+        intent.putExtra("xy_2", xy_2);
+        intent.putExtra("xy_3", xy_3);
+        intent.putExtra("xy_4", xy_4);
+        intent.putExtra("rl", rl);
+        intent.putExtra("cl", cl);
+        intent.putExtra("db_cs", db_cs);
+        intent.putExtra("nl", nl);
+        intent.putExtra("ywgm1", ywgm1);
+        intent.putExtra("db_sj", db_sj);
+        intent.putExtra("db_rggm", db_rggm);
+        intent.putExtra("nl_sj", nl_sj);
+        intent.putExtra("yzr", yzr);
+        intent.putExtra("othername1", othername1);
+        intent.putExtra("othervalue1", othervalue1);
+        intent.putExtra("othername2", othername2);
+        intent.putExtra("othervalue2", othervalue2);
+        intent.putExtra("xybhd", xybhd);
+        intent.putExtra("xt", xt);
+        intent.setAction("com.herench.change.person.other");
+        sendBroadcast(intent);
+    }
+
 }

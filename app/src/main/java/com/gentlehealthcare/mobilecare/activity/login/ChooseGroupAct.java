@@ -65,7 +65,7 @@ public class ChooseGroupAct extends BaseActivity {
         setContentView(R.layout.activity_choosegroup_main);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage(getString(R.string.gettingsectiondatalater));
-        groupNames = new ArrayList<String>();
+        groupNames = new ArrayList<>();
         PatientDao.newInstance(this);
         PatientMattersDao.newInstance(this);
         PatientMedicineDao.newInstance(this);
@@ -79,9 +79,8 @@ public class ChooseGroupAct extends BaseActivity {
         } else {
             finish();
         }
-
         lv_group = (ListView) findViewById(R.id.lv_choosegroup);
-        lv_group.setAdapter(new GroupAdapter(this, groupNames));
+        lv_group.setAdapter(new GroupAdapter(ChooseGroupAct.this, groupNames));
         lv_group.setOnItemClickListener(new OnItemClickListener() {
 
             @Override

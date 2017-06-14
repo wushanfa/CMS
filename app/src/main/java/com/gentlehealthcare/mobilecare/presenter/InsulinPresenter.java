@@ -2,9 +2,7 @@ package com.gentlehealthcare.mobilecare.presenter;
 
 import com.gentlehealthcare.mobilecare.bean.insulin.InjectionSiteBean;
 import com.gentlehealthcare.mobilecare.model.IInsulinModel;
-import com.gentlehealthcare.mobilecare.model.IPatientModel;
 import com.gentlehealthcare.mobilecare.model.impl.InsulinModel;
-import com.gentlehealthcare.mobilecare.model.impl.PatientModel;
 import com.gentlehealthcare.mobilecare.tool.CCLog;
 import com.gentlehealthcare.mobilecare.view.IInsulinInjectionView;
 
@@ -141,5 +139,4 @@ public class InsulinPresenter {
             updateSite(patId, siteId, itemNo, 0, planId);
         }
     }
-
 }

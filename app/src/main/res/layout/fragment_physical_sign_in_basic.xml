@@ -1,0 +1,388 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rl_recore_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                tools:context="com.gentlehealthcare.mobilecare.fragment.PhysicalSignInBasicFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center|end"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="@string/record_time"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/rectangular_border_bg"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="30dp">
+
+                    <EditText
+                        android:id="@+id/et_record_time"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:digits="0123456789:："
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_record_time"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/btn_xiamian"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#888888"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/tv_measured_temperature"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|end"
+                    android:text="体温："
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginEnd="20dp">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangular_border_bg"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/tv_measure_type"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:background="#888888"
+                            android:gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/tv_temperature"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
+                        android:text="°C"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="50dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp">
+
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="20dp"
+                        android:text="特殊腋温："
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+
+                    <EditText
+                        android:id="@+id/tv_spical_temperature"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangular_border_bg"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
+                        android:text="°C"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+
+                    <EditText
+                        android:id="@+id/tv_cool_type"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangular_border_bg"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|end"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="脉搏："
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/tv_pulse"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rectangular_border_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="次/分"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|end"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="心率："
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/tv_heart_rate"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rectangular_border_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="次/分"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|end"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="呼吸："
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/tv_breathing_count"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rectangular_border_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="次/分"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="使用呼吸机："
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <Switch
+                android:id="@+id/sw_use_ventilator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="10dp"
+                android:minWidth="80dp"
+                android:switchMinWidth="50dp"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@drawable/thumb"
+                android:thumbTextPadding="25dp"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|end"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:text="疼痛："
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/tv_pain"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rectangular_border_bg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_physical_sign_in_basic_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn_save_red_bg"
+        android:text="@string/save"
+        android:textColor="@color/white"/>
+
+    <com.gentlehealthcare.mobilecare.view.DefineKeyBoardView
+        android:id="@+id/layout_define_keyboard_define_key_board_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"/>
+
+</RelativeLayout>

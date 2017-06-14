@@ -20,8 +20,8 @@ public class UserInfo {
     private static String deptName;//部门名称
     private static String capability;//用户等级
 
-    private static List<SyncPatientBean> myPatient = new ArrayList<SyncPatientBean>();//我的病人
-    private static List<SyncPatientBean> deptPatient = new ArrayList<SyncPatientBean>();//部门病人
+    private static List<SyncPatientBean> myPatient = new ArrayList<>();//我的病人
+    private static List<SyncPatientBean> deptPatient = new ArrayList<>();//部门病人
 
     public static String getUserName() {
         return userName;

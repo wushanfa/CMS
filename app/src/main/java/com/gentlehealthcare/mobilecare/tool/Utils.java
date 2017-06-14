@@ -158,7 +158,6 @@ public class Utils {
         Canvas canvas = new Canvas(bitmap);
         drawable.draw(canvas);
         return bitmap;
-
     }
 
     /**
@@ -171,8 +170,6 @@ public class Utils {
         }
         return new BitmapDrawable(bm);
     }
-
-
 }
 
 

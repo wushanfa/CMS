@@ -22,4 +22,18 @@
     <string name="blood_sugar_notice_third">异常值，病人医师</string>
     <string name="blood_sugar_switch_first">待执行0</string>
     <string name="blood_sugar_switch_second">执行中0</string>
+    <string name="clear_data"><![CDATA[<]]></string>
+    <string name="qing">清</string>
+    <string name="shutdown">关闭</string>
+    <string name="dot">.</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
 </resources>

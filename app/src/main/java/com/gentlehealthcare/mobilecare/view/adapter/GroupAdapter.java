@@ -47,7 +47,7 @@ public class GroupAdapter extends BaseAdapter {
         // TODO Auto-generated method stub
         ViewHolder viewHolder = null;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.activity_choosegroup_item, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.activity_choosegroup_item, parent,false);
             viewHolder = new ViewHolder();
             viewHolder.tv_groupName = (TextView) convertView.findViewById(R.id.tv_groupname);
             convertView.setTag(viewHolder);
@@ -76,5 +76,4 @@ public class GroupAdapter extends BaseAdapter {
     private class ViewHolder {
         private TextView tv_groupName;
     }
-
 }

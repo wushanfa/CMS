@@ -43,29 +43,34 @@ public class HomeBoardAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder=null;
-        if (convertView==null){
-            convertView= LayoutInflater.from(context).inflate(R.layout.activity_home_item,parent,false);
-            viewHolder=new ViewHolder();
-            viewHolder.tv_content= (TextView) convertView.findViewById(R.id.tv_home_content);
-            viewHolder.tv_sum= (SquareTextView) convertView.findViewById(R.id.tv_home_sum);
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.activity_home_item, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.tv_content = (TextView) convertView.findViewById(R.id.tv_home_content);
+            viewHolder.tv_sum = (SquareTextView) convertView.findViewById(R.id.tv_home_sum);
             convertView.setTag(viewHolder);
-        }else{
-            viewHolder= (ViewHolder) convertView.getTag();
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        HomeBean homeBean=homeBeanList.get(position);
+        HomeBean homeBean = homeBeanList.get(position);
         viewHolder.tv_sum.setVisibility(View.GONE);
-        if (homeBean.isVisible()){
+        if (homeBean.isVisible()) {
 
             viewHolder.tv_content.setText(homeBean.getContent());
-        }else{
+        } else {
             convertView.setVisibility(View.GONE);
+        }
+        if (position == 7) {
+            viewHolder.tv_content.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.measure_border));
+            viewHolder.tv_content.setTextColor(context.getResources().getColor(R.color.blue_normal));
         }
         return convertView;
     }
-    private class ViewHolder{
-    private TextView tv_content;
+
+    private class ViewHolder {
+        private TextView tv_content;
         private SquareTextView tv_sum;
     }
 }

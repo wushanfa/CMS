@@ -815,12 +815,16 @@ public class UrlConstant {
     }
 
     /**
-     *
+     *记录输血异常
      */
     public static String RecInspectDate() {
         return GetBaseUrl() + "/transfusion/recInspectResult";
     }
 
+    /**
+     * 记录正常
+     * @return
+     */
     public static String recNormal() {
         return GetBaseUrl() + "/transfusion/recNormal";
     }
@@ -839,7 +843,6 @@ public class UrlConstant {
         return GetBaseUrl() + "/intrav/loadIntravsForFlushingByPatId?patId=";
     }
 
-    // http://localhost:8081/mnis/intrav/loadIntravsForFlushingByPatId?patId=40609
 
     /**
      * 记录关联的冲管医嘱任务
@@ -1397,26 +1400,51 @@ public class UrlConstant {
         return GetBaseUrl()+"/sys/downloaderApk";
     }
 
+    /**
+     * 血品核收
+     * @return
+     */
     public static String bloodBagNuclearChange(){
         return GetBaseUrl()+"/transfusion/modifyCollect?username=";
 
     }
+
+    /**
+     * 加载待核收
+     * @return
+     */
     public static String collect(){
         return GetBaseUrl()+"/transfusion/collect?wardCode=";
     }
 
+    /**
+     * 加载巡视历史记录
+     * @return
+     */
     public static String getNursingPatrolHistroy() {
         return GetBaseUrl() + "/sys/getNursingPatrolHistroy?patId=";
     }
 
+    /**
+     * 保存护理巡视
+     * @return
+     */
     public static String saveNursingPatrol() {
         return GetBaseUrl() + "/sys/saveNursingPatrol?patId=";
     }
 
+    /**
+     * 加载护理巡视字典
+     * @return
+     */
     public static String loadNursingPatrolDict() {
         return GetBaseUrl() + "/sys/loadNursingPatrolDict?";
     }
-    
+
+    /**
+     * 保存体征信息
+     * @return
+     */
     public static String saveSigns() {
         return GetBaseUrl() + "/threeTest/saveThreeTest?patId=";
     }

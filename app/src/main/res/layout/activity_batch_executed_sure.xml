@@ -1,57 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_batch_executed_sure"
     android:layout_width="fill_parent"
     android:layout_height="120dp"
-    android:background="@color/white">
+    android:layout_marginLeft="80dp"
+    android:layout_marginRight="80dp"
+    android:background="@drawable/activity_batch_executed_sure_time_out_style">
 
     <TextView
         android:id="@+id/tv_execute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:typeface="serif"
+        android:gravity="center_horizontal"
+        android:text="@string/suggest"
         android:textColor="@color/black_text_title"
-        android:text="执行"/>
+        android:typeface="serif" />
 
     <TextView
-        android:layout_below="@+id/tv_execute"
         android:id="@+id/tv_execute_num"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
-        android:paddingLeft="30dp"
-        android:textColor="@color/black_text_content"
-        android:text="执行"/>
+        android:layout_below="@+id/tv_execute"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:textColor="@color/black_text_content" />
 
     <LinearLayout
-        android:layout_below="@+id/tv_execute_num"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
+        android:layout_below="@+id/tv_execute_num"
         android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_cancel"
             android:layout_width="60dp"
             android:layout_height="32dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@null"
-            android:text="取消"/>
+            android:text="@string/cancle"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_execute"
             android:layout_width="60dp"
             android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
             android:background="@null"
-            android:layout_marginRight="30dp"
-            android:text="执行"/>
+            android:text="@string/execute"
+            android:textSize="15sp" />
     </LinearLayout>
-
 
 
 </RelativeLayout>

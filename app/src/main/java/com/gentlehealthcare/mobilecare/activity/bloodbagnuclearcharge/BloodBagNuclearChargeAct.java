@@ -3,6 +3,7 @@ package com.gentlehealthcare.mobilecare.activity.bloodbagnuclearcharge;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -32,18 +33,15 @@ import java.util.regex.Pattern;
  * 类说明：血品核收
  */
 
-public class BloodBagNuclearChargeAct extends BaseActivity
-    implements
-      IBloodBagNuclearChangeView,
-      View.OnClickListener {
+public class BloodBagNuclearChargeAct extends BaseActivity implements IBloodBagNuclearChangeView, View.OnClickListener {
   public BloodBagNuclearChangePresenter bloodBagNuclearChangePresenter = null;
   public com.gentlehealthcare.mobilecare.swipe.view.XListView lv_orders;
   public Button btn_back;
-  List<BloodProductBean2> bloodProductBean2s = new ArrayList<BloodProductBean2>();
+  List<BloodProductBean2> bloodProductBean2s = new ArrayList<>();
   private static String currentLogId = "";
   public BloodBagNuclearChangeAdapter bloodProductsListAdapter;
   // 将多袋血置顶，护士手动向左滑动退回血库
-  List<BloodProductBean2> topList = new ArrayList<BloodProductBean2>();
+  List<BloodProductBean2> topList = new ArrayList<>();
   private static String currentBloodDonorCode = "";
   private Vibrator vibrator;
 
@@ -125,14 +123,11 @@ public class BloodBagNuclearChargeAct extends BaseActivity
 
   /**
    * 红外扫描获取的值
-   *
-   * @param result
    */
   public void DoCameraResult(String result) {
     bloodBagNuclearChangePresenter.commRec(UserInfo.getUserName(), result,
         DeviceTool.getDeviceId(this));
-    List<BarcodeDict> barcodeDicts = new ArrayList<BarcodeDict>();
-    barcodeDicts = LocalSave.getDataList(getApplicationContext(),
+    List<BarcodeDict> barcodeDicts = LocalSave.getDataList(getApplicationContext(),
         GlobalConstant.KEY_BARCODE);
 
     String barcodeName = "";
@@ -149,11 +144,10 @@ public class BloodBagNuclearChargeAct extends BaseActivity
       if (CollectionsTool.isEmpty(topList)) {
         flag = false;
       } else {
-
         for (int i = 0; i < topList.size(); i++) {
-          if ((result.equals(topList.get(i).getBloodProductCode())
-              && topList.get(i).getBloodDonorCode().equals(currentBloodDonorCode))) {
+          if ((result.equals(topList.get(i).getBloodProductCode()) && topList.get(i).getBloodDonorCode().equals(currentBloodDonorCode))) {
             currentLogId = topList.get(i).getLogId();
+            Log.d("sxz","result："+result+",currentBloodDonorCode："+currentBloodDonorCode+",currentLogId："+currentLogId);
             if ("1".equals(topList.get(i).getBloodStatus())) {
               tostMsg(true, "此血品已在执行中");
             } else if ("9".equals(topList.get(i).getBloodStatus())) {
@@ -167,7 +161,6 @@ public class BloodBagNuclearChargeAct extends BaseActivity
               topList.clear();
               bloodBagNuclearChangePresenter.bloodBagNuclearChange(currentLogId,
                   UserInfo.getName(), UserInfo.getUserName(), UserInfo.getWardCode());
-
             }
             flag = true;
             break;
@@ -183,9 +176,9 @@ public class BloodBagNuclearChargeAct extends BaseActivity
       }
     } else if (barcodeName.equals("BLOOD_DONOR_CODE")) {// 血袋号
       currentBloodDonorCode = result;
-      final List<BloodProductBean2> temp = new ArrayList<BloodProductBean2>();
-      List<BloodProductBean2> others = new ArrayList<BloodProductBean2>();
-      List<BloodProductBean2> commonTop = new ArrayList<BloodProductBean2>();
+      final List<BloodProductBean2> temp = new ArrayList<>();
+      List<BloodProductBean2> others = new ArrayList<>();
+      List<BloodProductBean2> commonTop = new ArrayList<>();
       temp.clear();
       others.clear();
       commonTop.clear();
@@ -216,10 +209,9 @@ public class BloodBagNuclearChargeAct extends BaseActivity
           temp.add(commonTop.get(0));
         }
       } else {
-        // 血袋码未找到
+        //血袋码未找到
         tostMsg(true, "未找到该血品信息");
       }
-
       topList.addAll(commonTop);
       topList.addAll(others);
       bloodProductsListAdapter.notifyDataSetChanged(topList);

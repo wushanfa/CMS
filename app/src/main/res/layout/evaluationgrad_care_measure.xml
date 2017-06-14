@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--顶部的ActionBar-->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/title_back_vital_save"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/bg_org_blue"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="压疮评估"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="(NORTON)"
+            android:textColor="@color/org_blue_background"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="96dp"
+        android:background="#dcdcdc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="时间:"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_date_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/rectangular_border_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="2015-07-05  16:00"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="高度危险:0分"
+            android:autoLink="all"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="65dp"
+        android:layout_marginTop="136dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="身体状况："
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pop_eating"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangular_border_bg"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_score_eating"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="0分"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="上次："
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="好"
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="精神状况："
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pop_wash"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangular_border_bg"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_score_wash"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="0分"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="上次："
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="思维敏捷"
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="活动能力："
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pop_modified"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangular_border_bg"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_score_modified"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="0分"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="上次："
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="可以走动"
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="灵活程度："
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pop_dress"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangular_border_bg"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_score_dress"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="0分"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="上次："
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="行动自如"
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="失禁情况："
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pop_bowels"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:background="@drawable/rectangular_border_bg"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_score_bowels"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="0分"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:text="上次："
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="无失禁"
+                            android:textColor="@color/gray_holo_dark"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="控制小便："-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_pop_urinate"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:background="@drawable/rectangular_border_bg"-->
+                            <!--android:gravity="center"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上次："-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="偶尔失禁或需要器具帮助"-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_score_urinate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="0分"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="#dcdcdc" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="如厕："-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_pop_toilet"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:background="@drawable/rectangular_border_bg"-->
+                            <!--android:gravity="center"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上次："-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="需要部分帮助，在穿脱衣裤或使用卫生纸时需要帮助"-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_score_toilet"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="0分"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="#dcdcdc" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="床椅转移："-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_pop_bed"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:background="@drawable/rectangular_border_bg"-->
+                            <!--android:gravity="center"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上次："-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="能坐，但需要大量帮助（2人）才能转移"-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_score_bed"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="0分"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="#dcdcdc" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="平地行走："-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_pop_walk"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:background="@drawable/rectangular_border_bg"-->
+                            <!--android:gravity="center"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上次："-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="在轮椅上独立行走，能行走45米"-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_score_walk"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="0分"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="#dcdcdc" />-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingBottom="5dp">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上下楼梯："-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_pop_stairs"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:background="@drawable/rectangular_border_bg"-->
+                            <!--android:gravity="center"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="17sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical|right"-->
+                            <!--android:text="上次："-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="需要帮助和监督"-->
+                            <!--android:textColor="@color/gray_holo_dark"-->
+                            <!--android:textSize="15sp" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_score_stairs"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="0分"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="17sp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="#dcdcdc" />-->
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save_assessment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn_save_red_bg"
+        android:text="下一步"
+        android:textColor="@color/white" />
+</RelativeLayout>

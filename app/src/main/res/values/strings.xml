@@ -134,7 +134,7 @@
     <string name="xintiao">心跳</string>
     <string name="shijian">时间</string>
     <string name="submit_with_blank">提 交</string>
-    <string name="recordsucessed" />
+    <string name="recordsucessed"/>
     <string name="savesuccessed">保存成功</string>
     <string name="saveing">正在保存...</string>
     <string name="inputspeed">输入滴速值</string>
@@ -231,6 +231,26 @@
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="cancle">取消</string>
+    <string name="execute">执行</string>
+    <string name="suggest">提示</string>
+
+    <string name="clear_data"><![CDATA[<]]></string>
+    <string name="qing">清</string>
+    <string name="shutdown">关闭</string>
+    <string name="dot">.</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="onItemClick">com.herench.onItemClick</string>
+    <string name="record_time">记录时间：</string>
 
 
 </resources>

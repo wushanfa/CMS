@@ -4,10 +4,10 @@ android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     useLibrary 'org.apache.http.legacy'
-    android{compileOptions.encoding="UTF-8"}
+    android { compileOptions.encoding = "UTF-8" }
     defaultConfig {
         applicationId "com.gentlehealthcare.mobilecare"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -18,6 +18,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dexOptions{
+        incremental true
+        javaMaxHeapSize "2048m"
+        jumboMode true
+        preDexLibraries false
     }
 }
 
@@ -30,6 +36,9 @@ dependencies {
     compile files('libs/xUtils-2.6.14.jar')
     compile files('libs/sun.misc.BASE64Decoder.jar')
     compile files('libs/slidingmenu.jar')
+    compile files('libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
 }
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"

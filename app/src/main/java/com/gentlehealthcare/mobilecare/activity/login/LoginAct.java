@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -132,13 +133,14 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 		}
 		SystemInfoSave save = SystemInfoSave.getInstance(LoginAct.this);
 		Map<String, String> map = save.get();
-
-		if (map.get("ip") == null || "".equals(map.get("ip"))
-				|| map.get("port") == null || "".equals(map.get("port"))) {
-			map = new HashMap<String, String>();
-			map.put("ip", "192.168.120.190");
-			map.put("port", "8081");
-			save.save(map);
+		if (map != null) {
+			if (map.get("ip") == null || "".equals(map.get("ip"))
+					|| map.get("port") == null || "".equals(map.get("port"))) {
+				map = new HashMap<String, String>();
+				map.put("ip", "192.168.120.190");
+				map.put("port", "8081");
+				save.save(map);
+			}
 		}
 	}
 
@@ -179,14 +181,15 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 						return false;
 					}
 				});
-		((Button) findViewById(R.id.btn_login))
+		//用户登录
+		(findViewById(R.id.btn_login))
 				.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View view) {
 						doLogin();
 					}
 				});
-		((Button) findViewById(R.id.btn_login))
+		(findViewById(R.id.btn_login))
 				.setOnLongClickListener(new View.OnLongClickListener() {
 					@Override
 					public boolean onLongClick(View view) {
@@ -321,7 +324,6 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 				return true;
 			}
 		});
-
 	}
 
 	/**
@@ -368,19 +370,16 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	private void doLogin() {
-
 		String password = edtPassword.getText().toString().trim();
 		username = edtUsername.getText().toString().trim();
 		if (username.isEmpty()) {
-			Toast.makeText(LoginAct.this, "请按扫描键扫描或者手动输入账号", Toast.LENGTH_SHORT)
-					.show();
+			Toast.makeText(LoginAct.this, "请按扫描键扫描或者手动输入账号", Toast.LENGTH_SHORT).show();
 		} else if (!flag) {
 			flag = true;
 			edtPassword.setBackgroundResource(R.drawable.edittextshape);
 			edtUsername.setFocusable(false);
 			edtPassword.setFocusable(true);
 			edtUsername.setBackgroundResource(R.drawable.frame_black);
-
 		} else if (password.isEmpty()) {
 			Toast.makeText(LoginAct.this, "请输入密码!", Toast.LENGTH_SHORT).show();
 		} else {
@@ -397,11 +396,11 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 
 						@Override
 						public void doResult(LoginBean t, int id) {
+
 						}
 
 						@Override
-						public void doResult(String result)
-								throws KeyObsoleteException {
+						public void doResult(String result) throws KeyObsoleteException {
 							Gson gson = new Gson();
 							Type type = new TypeToken<LoginBean>() {
 							}.getType();
@@ -409,8 +408,7 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 							if (!t.getResult()) {
 								// 登录失败
 								pDialog.dismiss();
-								Toast.makeText(LoginAct.this, t.getMsg(),
-										Toast.LENGTH_SHORT).show();
+								Toast.makeText(LoginAct.this, t.getMsg(),Toast.LENGTH_SHORT).show();
 								return;
 							}
 							if(!StringTool.isEmpty(t.getServiceTime())){
@@ -450,10 +448,8 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
                             UserInfo.setUserName(username);
 							UserInfo.setKey(t.getKey());
 							toHomeAct();
-							startService(new Intent(LoginAct.this,
-									CamerService.class));
-							Intent sendIntent = new Intent(
-									"df.scanservice.toapp");
+							startService(new Intent(LoginAct.this,CamerService.class));
+							Intent sendIntent = new Intent("df.scanservice.toapp");
 							sendBroadcast(sendIntent);
 							pDialog.dismiss();
 						}
@@ -461,17 +457,14 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 						@Override
 						public void doException(Exception e,
 								boolean networkState) {
-
 							pDialog.dismiss();
-							if (networkState)
-								Toast.makeText(LoginAct.this,
-										"加载异常" + e.getMessage(),
+							if (networkState) {
+								Toast.makeText(LoginAct.this, "加载异常" + e.getMessage(),
 										Toast.LENGTH_SHORT).show();
-							else
-								Toast.makeText(LoginAct.this,
-										getString(R.string.netstate_content),
+							} else {
+								Toast.makeText(LoginAct.this, getString(R.string.netstate_content),
 										Toast.LENGTH_SHORT).show();
-
+							}
 						}
 					}, 0, true, loginBean));
 		}
@@ -492,13 +485,11 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 				} else {
 					edtPassword.setText("");
 				}
-
 			}
 		}
 	};
 
 	public void toHomeAct() {
-
 		Intent intent = new Intent(LoginAct.this, HomeAct.class);
 		startActivity(intent);
 		finish();
@@ -727,7 +718,6 @@ public class LoginAct extends BaseActivity implements OnTouchListener {
 	}
 
 	public void showProgressDialog() {
-
 		if (progressDialog == null) {
 			progressDialog = new ProgressDialog(this);
 			progressDialog.setCanceledOnTouchOutside(false);

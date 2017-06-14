@@ -11,12 +11,15 @@ public class ImplementationFraFactory {
         Fragment fragment = null;
         switch (index) {
             case 1:
+                //详情
                 fragment = new IndexFra();
                 break;
             case 2:
+                //记录
                 fragment = new recordFra();
                 break;
             case 3:
+                //说明
                 fragment = new IntroductionsFra();
                 break;
         }

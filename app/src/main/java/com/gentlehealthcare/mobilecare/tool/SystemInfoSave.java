@@ -1,10 +1,10 @@
 package com.gentlehealthcare.mobilecare.tool;
 
-import java.util.Map;
-import java.util.Set;
-
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import java.util.Map;
+import java.util.Set;
 
 public class SystemInfoSave {
 	private static final String name = "systeminfo";

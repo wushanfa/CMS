@@ -1,5 +1,7 @@
 package com.gentlehealthcare.mobilecare.model.impl;
 
+import android.util.Log;
+
 import com.gentlehealthcare.mobilecare.constant.GlobalConstant;
 import com.gentlehealthcare.mobilecare.constant.UrlConstant;
 import com.gentlehealthcare.mobilecare.model.IBloodBagNuclearChangeModel;
@@ -29,12 +31,11 @@ import java.util.List;
 
 public class BloodBagNuclearChangeModel implements IBloodBagNuclearChangeModel {
 
-
     @Override
     public void BloodBagNuclearChange(String code, String user,String username, String wardCode, final BloodBagNuclearChangeModelListener listener) {
         HttpUtils http=new HttpUtils();
         String url= UrlConstant.bloodBagNuclearChange()+username+"&user="+ UrlTool.transWord(user)+"&code="+ UrlTool.transWord(code)+"&wardCode="+UrlTool.transWord(wardCode);
-        CCLog.i("核收血>>>",url);
+        Log.d("sxz","url："+url);
         http.send(HttpRequest.HttpMethod.POST, url, new RequestCallBack<String>() {
             @Override
             public void onSuccess(ResponseInfo<String> responseInfo) {
@@ -99,7 +100,7 @@ public class BloodBagNuclearChangeModel implements IBloodBagNuclearChangeModel {
     public void bloodBack(String wardCode, String username, String logId, final bloodBackListener listener) {
         HttpUtils http=new HttpUtils();
         String url= UrlConstant.bloodBack()+username+"&wardCode="+UrlTool.transWord(wardCode)+"&logId="+logId;
-        CCLog.i("退回血库>>>",url);
+        Log.d("sxz","退回血库："+url);
         http.send(HttpRequest.HttpMethod.POST, url, new RequestCallBack<String>() {
             @Override
             public void onSuccess(ResponseInfo<String> responseInfo) {

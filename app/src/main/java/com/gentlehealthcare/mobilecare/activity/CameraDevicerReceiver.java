@@ -3,12 +3,14 @@ package com.gentlehealthcare.mobilecare.activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.gentlehealthcare.mobilecare.R;
 import com.gentlehealthcare.mobilecare.UserInfo;
 import com.gentlehealthcare.mobilecare.activity.bloodbagnuclearcharge.BloodBagNuclearChargeAct;
 import com.gentlehealthcare.mobilecare.activity.bloodsugar.BloodSugarActivity;
+import com.gentlehealthcare.mobilecare.activity.gradedcareevaluation.GradedCareEvaluationAct;
 import com.gentlehealthcare.mobilecare.activity.home.AddPioRecActivity;
 import com.gentlehealthcare.mobilecare.activity.home.DoctorOrdersAct;
 import com.gentlehealthcare.mobilecare.activity.home.HomeAct;
@@ -122,10 +124,19 @@ public class CameraDevicerReceiver extends BroadcastReceiver {
                         ((DocOrdersActivity) ActivityControlTool.currentActivity).DoCameraResult(result);
                         CCLog.i("DocOrdersActivity界面扫描值>>>>>", result);
                     }
-                } else if (ActivityControlTool.currentActivity instanceof OrdersCheckActivity) {
+                }
+                else if (ActivityControlTool.currentActivity instanceof OrdersCheckActivity) {
                     ((OrdersCheckActivity) ActivityControlTool.currentActivity).DoCameraResult(result);
                     CCLog.i("OrdersCheckActivity扫描的值>>>>>", result);
-                } else if (ActivityControlTool.currentActivity instanceof IntravenousAct) {
+                }
+                else if (ActivityControlTool.currentActivity instanceof TemperatureAct) {
+                    ((TemperatureAct) ActivityControlTool.currentActivity).DoCameraResult(result);
+                    CCLog.i("TemperatureAct扫描的值>>>>>", result);
+                }
+                else if (ActivityControlTool.currentActivity instanceof GradedCareEvaluationAct) {
+                    ((GradedCareEvaluationAct) ActivityControlTool.currentActivity).DoCameraResult(result);
+                    CCLog.i("TemperatureAct扫描的值>>>>>", result);
+                }else if (ActivityControlTool.currentActivity instanceof IntravenousAct) {
                     ((IntravenousAct) ActivityControlTool.currentActivity).DoCameraResult(result);
                     CCLog.i("IntravenousAct扫描的值>>>>>", result);
                 } else if (ActivityControlTool.currentActivity instanceof HomeAct) {

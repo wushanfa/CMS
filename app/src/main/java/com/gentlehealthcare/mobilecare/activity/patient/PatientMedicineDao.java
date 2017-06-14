@@ -196,7 +196,7 @@ public class PatientMedicineDao {
         try {
             String[] strings = templateId;
             if (strings.length > 1) {
-                return dao.queryBuilder().orderBy("state", true).orderBy("startTime", true).orderBy("group", true).where().eq("patientId", patientId).and().eq("state", state).and().in("templateId",  templateId).query();
+                return dao.queryBuilder().orderBy("state", true).orderBy("startTime", true).orderBy("group", true).where().eq("patientId", patientId).and().eq("state", state).and().in("templateId",templateId).query();
             } else {
                 return dao.queryBuilder().orderBy("state", true).orderBy("startTime", true).orderBy("group", true).where().eq("patientId", patientId).and().eq("state", state).and().eq("templateId", strings[0]).query();
             }

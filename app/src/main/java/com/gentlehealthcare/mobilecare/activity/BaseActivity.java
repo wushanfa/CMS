@@ -1,8 +1,6 @@
 package com.gentlehealthcare.mobilecare.activity;
 
 
-import java.lang.reflect.Method;
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +15,8 @@ import com.gentlehealthcare.mobilecare.NurseApp;
 import com.gentlehealthcare.mobilecare.tool.SupportDisplay;
 import com.umeng.analytics.MobclickAgent;
 
+import java.lang.reflect.Method;
+
 /**
  * 基类Activity
  */
@@ -25,12 +25,10 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         SupportDisplay.initLayoutSetParams(BaseActivity.this);
         ActivityControlTool.add(this);
     }
-
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -50,12 +48,10 @@ public abstract class BaseActivity extends FragmentActivity {
         } else {
             HidnGestWindow();
         }
-
     }
 
     @Override
     protected void onPause() {
-
         super.onPause();
         MobclickAgent.onPageStart(this.getClass().getName());
         MobclickAgent.onResume(this);
@@ -63,14 +59,12 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     protected void onStop() {
-
         super.onStop();
         ActivityControlTool.onStop(this);
     }
 
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
         ActivityControlTool.onDestroy(this);
         ActivityControlTool.remove(this);
@@ -79,7 +73,6 @@ public abstract class BaseActivity extends FragmentActivity {
 
     /**
      * 子类Activity必须实现的方法，用于初始化控件，重新适配等操作
-     *
      * @param
      * @return void
      * @Title resetLayout

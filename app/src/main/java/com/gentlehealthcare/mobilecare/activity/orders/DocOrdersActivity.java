@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -173,10 +174,11 @@ public class DocOrdersActivity extends BaseActivity
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.act_nurse_orders);
+    Log.d("sxz","医嘱执行");
     ViewUtils.inject(this);
     presenter = new DocOrdersPresenter(this);
     patientBean = new SyncPatientBean();
-    deptPatient = new ArrayList<SyncPatientBean>();
+    deptPatient = new ArrayList<>();
     initView();
     presenter.receiveData();
     presenter.getPatients(this, position);
@@ -922,8 +924,7 @@ public class DocOrdersActivity extends BaseActivity
                       .getPlanBatchNo();
                 }
                 if (isTimeOut(orderListBean.getStartDateTime(), floorDate, ceilDate)) {
-                  final AlertDialogTwoBtnNoicon alertDialogTwoBtnNoicon =
-                      new AlertDialogTwoBtnNoicon(this);
+                  final AlertDialogTwoBtnNoicon alertDialogTwoBtnNoicon = new AlertDialogTwoBtnNoicon(this);
                   alertDialogTwoBtnNoicon.setTitle("提示");
                   alertDialogTwoBtnNoicon.setMessage("此医嘱已超过计划执行时间，是否继续？");
                   alertDialogTwoBtnNoicon.setRightButton("是", new OnClickListener() {

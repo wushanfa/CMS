@@ -1,9 +1,16 @@
 package com.gentlehealthcare.mobilecare.activity.login;
 
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.gentlehealthcare.mobilecare.R;
 import com.gentlehealthcare.mobilecare.UserInfo;
@@ -25,18 +32,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.umeng.analytics.MobclickAgent;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * App引导界面 TODO
@@ -103,12 +102,14 @@ public class WelcomeAct extends BaseActivity {
         SystemInfoSave save=SystemInfoSave.getInstance(WelcomeAct.this);
         Map<String ,String> map=save.get();
         //如果IP和PORT没有保存的话，初始化IP和PORT
-        if (map.get("ip")==null||"".equals(map.get("ip"))||map.get("port")==null||"".equals(map.get("port"))){
-            map=new HashMap<String, String>();
-            map.put("ip","192.168.120.190");
-            map.put("port","8081");
-            save.save(map);
-        }
+		if (map != null) {
+			if (map.get("ip")==null||"".equals(map.get("ip"))||map.get("port")==null||"".equals(map.get("port"))){
+				map=new HashMap<String, String>();
+				map.put("ip","192.168.120.190");
+				map.put("port","8081");
+				save.save(map);
+			}
+		}
         /**
          *系统资料获取
          */

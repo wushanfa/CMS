@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/org_blue_background">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/select_btn_back"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_pat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_pat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="孙白玲"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_bigger" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_pat_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="女"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_pat_bed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:text="12床"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_pat_code"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0000114374"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/xiangxiajiantou" />
+    </LinearLayout>
+</LinearLayout>

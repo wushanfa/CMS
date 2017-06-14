@@ -270,17 +270,7 @@ public class HomeAct extends ABToolBarActivity {
 
     private long exitTime = 0;
 
-    /**
-     * 退出程序
-     */
-    public void ExitApp() {
-        if ((System.currentTimeMillis() - exitTime) > 2000) {
-            Toast.makeText(HomeAct.this, R.string.pressoncetoexittheprogram, Toast.LENGTH_SHORT).show();
-            exitTime = System.currentTimeMillis();
-        } else {
-            ActivityControlTool.finishAll(true);
-        }
-    }
+
 
     /**
      * 红外扫描获取的值
@@ -512,5 +502,17 @@ public class HomeAct extends ABToolBarActivity {
 
             }
         });
+    }
+
+    /**
+     * 退出程序
+     */
+    public void ExitApp() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(HomeAct.this, R.string.pressoncetoexittheprogram, Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            ActivityControlTool.finishAll(true);
+        }
     }
 }

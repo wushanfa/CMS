@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -92,7 +93,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * create by zhiwei on 2015/10/8
+ * 医嘱执行
  */
 public class DoctorOrdersAct extends BaseActivity implements CallBack, OnClickListener, OnItemLongClickListener,
         ExpandableListView.OnChildClickListener, ExpandableListView.OnGroupClickListener, PullToRefreshBase
@@ -191,6 +192,7 @@ public class DoctorOrdersAct extends BaseActivity implements CallBack, OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fra_doctororder_main);
         ViewUtils.inject(this);
+        Log.d("sxz","医嘱执行");
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage(getString(R.string.load_order_message));
         HidnGestWindow(true);

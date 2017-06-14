@@ -26,7 +26,7 @@ public class BloodBagNuclearChangePresenter {
     bloodBagNuclearChangeModel = new BloodBagNuclearChangeModel();
   }
 
-  public void bloodBagNuclearChange(String code, String user, String username, String wardCode) {
+  public void bloodBagNuclearChange(final String code, final String user, String username, String wardCode) {
     if (bloodBagNuclearChangeModel == null) {
       bloodBagNuclearChangeModel = new BloodBagNuclearChangeModel();
     }
@@ -34,7 +34,7 @@ public class BloodBagNuclearChangePresenter {
         new BloodBagNuclearChangeModel.BloodBagNuclearChangeModelListener() {
           @Override
           public void bloodBagNuclearChangeModelSucessed(List<BloodProductBean2> list) {
-            view.loadBag();
+             view.loadBag();
           }
 
           @Override

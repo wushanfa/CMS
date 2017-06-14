@@ -9,6 +9,13 @@
     <dimen name="text_size_big">20sp</dimen>
     <dimen name="text_size_small">16sp</dimen>
     <dimen name="top_right_bottom_left_padding">8dp</dimen>
+    <dimen name="text_size_bigger">35sp</dimen>
+
+    <dimen name="common_navigator_height">30dp</dimen>
+    <dimen name="navigator_margin_top">5dp</dimen>
+    <dimen name="small_navigator_height">5dp</dimen>
+    <dimen name="navigator_margin_top_large">45dp</dimen>
+    <dimen name="large_navigator_height">65dp</dimen>
 
 
 </resources>

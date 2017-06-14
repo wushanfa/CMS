@@ -95,7 +95,6 @@ public class HttpConnection {
         // }
         conn.disconnect();
         throw new SocketTimeoutException();
-
     }
 
     public String getResposeContent(InputStream is) {
@@ -209,7 +208,5 @@ public class HttpConnection {
         public IJsonExeption(String string) {
             // TODO Auto-generated constructor stub
         }
-
     }
-
 }

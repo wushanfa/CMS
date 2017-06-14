@@ -42,8 +42,6 @@ public class CopyRightAct extends BaseActivity {
 		btnStart.setOnClickListener(clickListener);
         Map<String,String> map=SystemInfoSave.getInstance(this).get();
 		tvCopyRight.setText( map.get("appCopyright"));
-
-
 	}
 
 	@Override

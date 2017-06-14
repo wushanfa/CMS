@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--顶部的ActionBar-->
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/title_back_vital_save"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_org_blue"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="跌倒评估(NORTON)"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="95dp"
+        android:background="#dcdcdc" />
+
+    <ListView
+        android:id="@+id/lv_evaluation_list_nursing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="96dp"
+        android:divider="@null"
+        android:layout_above="@+id/tv_evaluation_instructions"/>
+
+    <TextView
+        android:id="@+id/tv_evaluation_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="说明：\n评估值：≤14分则病人有发生压疮的危险；≤ 12分高度危险； ≤8分极度危险。分值≤12分的患者每班评估1次，其他患者每周评估1—2次或病情变化时随时评估。"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_above="@+id/btn_add_assessment"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_add_assessment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn_save_red_bg"
+        android:text="新增"
+        android:textColor="@color/white" />
+</RelativeLayout>

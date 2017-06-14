@@ -14,9 +14,6 @@ import com.lidroid.xutils.http.client.HttpRequest;
 import java.lang.reflect.Type;
 import java.util.List;
 
-/**
- * Created by zyy on 2016/5/6.
- */
 public class PatientModel implements IPatientModel {
 
     private static final String TAG = "PatientModel";
@@ -45,7 +42,6 @@ public class PatientModel implements IPatientModel {
 
             }
         });
-
     }
 
     public interface OnLoadPatientListListener {

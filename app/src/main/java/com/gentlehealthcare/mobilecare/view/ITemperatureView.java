@@ -20,6 +20,9 @@ public interface ITemperatureView {
     void showKey(String[] strs, int flag);
 
     void setPatientInfo(SyncPatientBean patientInfo);
-
-    void showPatients(List<SyncPatientBean> syncPatientBeanList);
+    /**
+     * 获取部门病人数据
+     */
+    void setPatient(List<SyncPatientBean> list);
+    void showPatients();
 }

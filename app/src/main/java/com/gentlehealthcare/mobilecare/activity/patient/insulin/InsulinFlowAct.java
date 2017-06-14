@@ -56,8 +56,7 @@ import java.util.Map;
 import javax.crypto.BadPaddingException;
 
 /**
- * 胰岛素流程Activity
- * Created by ouyang on 2015/5/27.
+ * 胰岛素流程
  */
 public class InsulinFlowAct extends ABToolBarActivity implements View.OnClickListener {
 
